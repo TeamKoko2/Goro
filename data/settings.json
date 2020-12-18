@@ -1,1 +1,33 @@
-{"client":"518624245933408292","tag":">","case":"false","separator":"\\s+","modules":{"discord.js":["",true],"fstorm":["",true],"jimp":["",true],"libsodium-wrappers":["",false],"opusscript":["",false],"ytdl-core":["",false]},"ownerId":"225470872452857856"}
+{
+  "client": "518624245933408292",
+  "tag": ">",
+  "case": "false",
+  "separator": "\\s+",
+  "modules": {
+    "discord.js": [
+      "",
+      true
+    ],
+    "fstorm": [
+      "",
+      true
+    ],
+    "jimp": [
+      "",
+      true
+    ],
+    "libsodium-wrappers": [
+      "",
+      false
+    ],
+    "opusscript": [
+      "",
+      false
+    ],
+    "ytdl-core": [
+      "",
+      false
+    ]
+  },
+  "ownerId": "225470872452857856"
+}
