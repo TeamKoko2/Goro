@@ -189,7 +189,7 @@
       {
         "behavior": "0",
         "interpretation": "0",
-        "code": "switch(tempVars(\"rand-num\")){\ncase 1: msg.channel.send(\"Don't lecture me, you piece of shit...\"); break;\ncase 2: msg.channel.send(\"That's not funny at all. It's disturbing.\"); break;\ncase 3: msg.channel.send(\"Even if I only have a little time, I'd like to spend it with you.\"); break;\ncase 4: msg.channel.send(\"If only there was someone who loved you.\"); break;\ncase 5: msg.channel.send(\"Teammates!? Friends!? To hell with that!\"); break;\ncase 6: msg.channel.send(\"Justice? Righteousness!? Keep that shit to yourselves!\"); break;\ncase 7: msg.channel.send(\"Pancakes… I never want to hear that word again for a long, *long* time.\"); break;\ncase 8: msg.channel.send(\"Oh, am I mistaken? I thought I heard something about pancakes...\"); break;\ncase 9: msg.channel.send(\"I am an ace detective… a celebrity! But you… you’re just some criminal trash living in an attic! **SO HOW…!?**\"); break;\ncase 10: msg.channel.send(\"In the end... I couldn't be special...\"); break;\ncase 11: msg.channel.send(\"My SKILLS exceeds yours!\"); break;\ncase 12: msg.channel.send(\"Case closed. This is how your 'justice' ends.\"); break;\ncase 13: msg.channel.send(\"No time for mercy, right?\"); break;\ncase 14: msg.channel.send(\"<@451188961180778496>'s enraged? I kind of like it, but it's not you! Calm down!\"); break;\ncase 15: msg.channel.send(\"Sorry, I didn't ask for your opinion.\"); break;\ncase 16: msg.channel.send(\"<@451188961180778496>, if you die now, I... I'll kill you again myself!\"); break;\ncase 17: msg.channel.send(\"Take the cat ears off, <@451188961180778496>. This is important.\"); break;\ncase 18: msg.channel.send(\"Shut the fuck up, catboy.\"); break;\ncase 19: msg.channel.send(\"No.\"); break;\ncase 20: msg.channel.send(\"What are you all doing? Taking a nap?\"); break;\ncase 21: msg.channel.send(\"Yes, I'm a pancake prince. And yes, I'm in love with <@451188961180778496>. Do you really have a problem with that?\"); break;\ncase 22: msg.channel.send(\"I... suppose, you can be my little pogchamp. Just this once. Come here.\"); break;\ncase 23: msg.channel.send(\"Yes, I'm trying to kill you. Stop being so immature about it.\"); break\ndefault: msg.channel.send(\"That's quite the funny joke. It makes me want to puke\"); break;\n}",
+        "code": "switch(tempVars(\"rand-num\")){\ncase 1: msg.channel.send(\"Don't lecture me, you piece of shit...\"); break;\ncase 2: msg.channel.send(\"That's not funny at all. It's disturbing.\"); break;\ncase 3: msg.channel.send(\"Even if I only have a little time, I'd like to spend it with you.\"); break;\ncase 4: msg.channel.send(\"If only there was someone who loved you.\"); break;\ncase 5: msg.channel.send(\"Teammates!? Friends!? To hell with that!\"); break;\ncase 6: msg.channel.send(\"Justice? Righteousness!? Keep that shit to yourselves!\"); break;\ncase 7: msg.channel.send(\"Pancakes… I never want to hear that word again for a long, *long* time.\"); break;\ncase 8: msg.channel.send(\"Oh, am I mistaken? I thought I heard something about pancakes...\"); break;\ncase 9: msg.channel.send(\"I am an ace detective… a celebrity! But you… you’re just some criminal trash living in an attic! **SO HOW…!?**\"); break;\ncase 10: msg.channel.send(\"In the end... I couldn't be special...\"); break;\ncase 11: msg.channel.send(\"My SKILLS exceeds yours!\"); break;\ncase 12: msg.channel.send(\"Case closed. This is how your 'justice' ends.\"); break;\ncase 13: msg.channel.send(\"No time for mercy, right?\"); break;\ncase 14: msg.channel.send(\"<@451188961180778496>'s enraged? I kind of like it, but it's not you! Calm down!\"); break;\ncase 15: msg.channel.send(\"Sorry, I didn't ask for your opinion.\"); break;\ncase 16: msg.channel.send(\"<@451188961180778496>, if you die now, I... I'll kill you again myself!\"); break;\ncase 17: msg.channel.send(\"Take the cat ears off, <@451188961180778496>. This is important.\"); break;\ncase 18: msg.channel.send(\"Shut the fuck up, catboy.\"); break;\ncase 19: msg.channel.send(\"No.\"); break;\ncase 20: msg.channel.send(\"What are you all doing? Taking a nap?\"); break;\ncase 21: msg.channel.send(\"Yes, I'm a pancake prince. And yes, I'm in love with <@451188961180778496>. Do you really have a problem with that?\"); break;\ncase 22: msg.channel.send(\"I... suppose, you can be my little pogchamp. Just this once. Come here.\"); break;\ncase 23: msg.channel.send(\"Yes, I'm trying to kill you. Stop being so immature about it.\"); break;\ndefault: msg.channel.send(\"That's quite the funny joke. It makes me want to puke\"); break;\n}",
         "storage": "0",
         "varName": "",
         "name": "Run Script"
@@ -219,79 +219,79 @@
         "name": "Run Script"
       },
       {
-  "name": "Name",
-  "permissions": "NONE",
-  "restriction": "1",
-  "_id": "NaQlU",
-  "actions": [
-    {
-      "message": "0",
-      "varName": "",
-      "info": "4",
-      "storage": "1",
-      "varName2": "msg",
-      "name": "Store Message Info"
-    },
-    {
-      "info": "0",
-      "find": "787926660091215893",
-      "storage": "1",
-      "varName": "channel",
-      "name": "Find Channel"
-    },
-    {
-      "storage": "1",
-      "varName": "msg",
-      "comparison": "1",
-      "value": "787926660091215893",
-      "iftrue": "0",
-      "iftrueVal": "",
-      "iffalse": "1",
-      "iffalseVal": "",
-      "name": "Check Variable"
-    },
-    {
-      "info": "0",
-      "find": "754445790428004463",
-      "storage": "1",
-      "varName": "role.name",
-      "name": "Find Role"
-    },
-    {
-      "member": "1",
-      "varName2": "",
-      "role": "3",
-      "varName": "role.name",
-      "reason": "",
-      "name": "Add Member Role"
-    },
-    {
-      "channel": "5",
-      "varName": "channel",
-      "message": "Enjoy your stay, ${member}.",
-      "storage": "1",
-      "varName2": "you.have",
-      "iffalse": "0",
-      "iffalseVal": "",
-      "name": "Send Message"
-    },
-    {
-      "time": "15",
-      "measurement": "1",
-      "name": "Wait"
-    },
-    {
-      "storage": "1",
-      "varName": "you.have",
-      "reason": "",
-      "name": "Delete Message"
-    },
-    {
-      "name": "End Action Sequence"
-    }
-  ],
-  "comType": "1"
-}
-        ]
+        "name": "Name",
+        "permissions": "NONE",
+        "restriction": "1",
+        "_id": "NaQlU",
+        "actions": [
+          {
+            "message": "0",
+            "varName": "",
+            "info": "4",
+            "storage": "1",
+            "varName2": "msg",
+            "name": "Store Message Info"
+          },
+          {
+            "info": "0",
+            "find": "787926660091215893",
+            "storage": "1",
+            "varName": "channel",
+            "name": "Find Channel"
+          },
+          {
+            "storage": "1",
+            "varName": "msg",
+            "comparison": "1",
+            "value": "787926660091215893",
+            "iftrue": "0",
+            "iftrueVal": "",
+            "iffalse": "1",
+            "iffalseVal": "",
+            "name": "Check Variable"
+          },
+          {
+            "info": "0",
+            "find": "754445790428004463",
+            "storage": "1",
+            "varName": "role.name",
+            "name": "Find Role"
+          },
+          {
+            "member": "1",
+            "varName2": "",
+            "role": "3",
+            "varName": "role.name",
+            "reason": "",
+            "name": "Add Member Role"
+          },
+          {
+            "channel": "5",
+            "varName": "channel",
+            "message": "Enjoy your stay, ${member}.",
+            "storage": "1",
+            "varName2": "you.have",
+            "iffalse": "0",
+            "iffalseVal": "",
+            "name": "Send Message"
+          },
+          {
+            "time": "15",
+            "measurement": "1",
+            "name": "Wait"
+          },
+          {
+            "storage": "1",
+            "varName": "you.have",
+            "reason": "",
+            "name": "Delete Message"
+          },
+          {
+            "name": "End Action Sequence"
+          }
+        ],
+        "comType": "1"
       }
     ]
+  }
+]
