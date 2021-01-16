@@ -1,6 +1,41 @@
 [
   null,
   {
+  "name": "Help",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "title": "",
+      "author": "",
+      "color": "#a48252",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "message": "**>help**\nLists available commands\n\n**>ping**\nLets you know if Goro is online\n\n**>say**\nMake me say anything you want\n\n**>ask**\nAsk Goro anything\n\n**>triggers**\nLists all of Goro's triggers\n\n**>goro**\nSends an image of Goro\n\n**>shoot [@user]**\nMurders the mentioned user in cold bood\n\n**>@Goro**\nGenerates a random response\n\n**>remindme**\nReminds you to write every three hours",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "KaQyJ",
+  "comType": "0"
+},
+  {
     "name": "Ping",
     "permissions": "NONE",
     "restriction": "1",
@@ -15,128 +50,8 @@
       }
     ],
     "_id": "GwiGB",
-    "_aliases": []
-  },
-  {
-    "name": "Help",
-    "permissions": "NONE",
-    "restriction": "1",
-    "actions": [
-      {
-        "title": "",
-        "author": "",
-        "color": "#a48252",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "msg",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "msg",
-        "message": "**>help**\nLists available commands\n\n**>ping**\nLets you know if Goro is online\n\n**>say**\nMake me say anything you want\n\n**>ask**\nAsk Goro anything\n\n**>triggers**\nLists all of Goro's triggers\n\n**>goro**\nSends an image of Goro\n\n**>shoot [@user]**\nMurders the mentioned user in cold bood\n\n**>@Goro**\nGenerates a random response\n\n",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "msg",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      }
-    ],
-    "_id": "KaQyJ"
-  },
-  {
-    "name": "Goro",
-    "permissions": "NONE",
-    "restriction": "1",
-    "_id": "dGgzY",
-    "actions": [
-      {
-        "behavior": "0",
-        "interpretation": "0",
-        "code": "const images = [\"https://i.pinimg.com/originals/ab/e3/0d/abe30d95faf7e21e99298007b9269f9d.gif\", \"https://i.pinimg.com/originals/5c/eb/9b/5ceb9b22eb19267ca6583d0c990269d5.gif\", \"https://i.pinimg.com/originals/aa/80/16/aa8016ed7fd6051ef812e5b59d0c280b.gif\", \"https://i.pinimg.com/originals/9f/d5/75/9fd575d279569bf9ccf1695ea427e32e.gif\", \"https://64.media.tumblr.com/3003f122ebf7f943bfb10db2daea5d9c/tumblr_p89pkeP6Z11w0hrkno1_400.gif\", \"https://64.media.tumblr.com/f543f9ad3253a7235107a84ef91b6e3b/tumblr_oqlgafmfFe1qffbm9o1_400.gif\", \"https://64.media.tumblr.com/5c02005c2e24eeaebea5e3b752ed2cb2/e21e8527b8f19667-5e/s540x810/d7037575faa35491f58791d25c2828123aa2bf98.gif\", \"https://64.media.tumblr.com/37dec0b086d37c6598ec190a5fcbcf8c/e21e8527b8f19667-6d/s540x810/d755d3479dbecf4ce531ece7854661609b513087.gif\",\n\"https://64.media.tumblr.com/0a7c9141301c821eb1eb360247819728/2247be1667970cbd-f6/s540x810/0e9274c65d1f4b0f15da0c27394f9dc5c5211d95.gif\", \"https://64.media.tumblr.com/fefef441a665128631708e6dc412cb5a/b77e33f8fbed6058-e6/s400x600/0d07af47cf10ce82d4406d2c3863702f348ae8ac.gif\", \"https://64.media.tumblr.com/483f7c865a47ce0d20ef3c0b201297f1/102261b1cb651c70-92/s540x810/5d3bef145860ab00ebc9314eb1acfb4f934bc03e.gif\", \"https://64.media.tumblr.com/6a56db202da6356afa49f805fc424c37/102261b1cb651c70-73/s540x810/27d60842c09a86c2cb9a1194de94f7a0d3e6ae46.gif\", \"https://64.media.tumblr.com/2e243f0e63c402ad49211471b4b995da/47d89c66fc8610a1-72/s400x600/bf29d4314349beeadcbde8efa556806deb01d434.gif\", \"https://64.media.tumblr.com/16f4b9b16ddbc5f398cc62f076761000/47d89c66fc8610a1-60/s400x600/aa5cd211a62fdee1116e70a36f0e0912c6b77c57.gif\", \"https://64.media.tumblr.com/d0d2695bafbaa0bac7a2cc8c019bc3c6/82b238aaf227a4e6-a3/s540x810/45dceb29966e1c20df220217ff9caafe10d3156d.gif\", \"https://64.media.tumblr.com/eb260da97902fdd68057e4ebe3645f80/82b238aaf227a4e6-64/s540x810/8a30c20f62a1be2f128fecf178d7b1aa14fff3a1.gif\", \"https://64.media.tumblr.com/ed244977a98ef4d24a1023b11bf0d5ae/2ff335f699efb8d4-dc/s540x810/4d2c6586133799c0f5cd6e1c9e7fd39d3025aa2c.gif\",\n\"https://64.media.tumblr.com/e487ac88dcf43b6e815724d7f004b340/3b64946df2c84321-c6/s540x810/4bcf0cbbbbc220eaf2e5cb8f8bbb4c0ccaa88e33.gif\", \"https://64.media.tumblr.com/e8165f887d1678dfd8affb0d385dd58b/035a8f34bedd12ed-fb/s540x810/2f14574d3ee661e530ee22239b589a02f7c802c3.gif\",\"https://64.media.tumblr.com/0b0c6997a86413e3a04cb61536470856/tumblr_pbrchxT9Yr1x6u4seo6_r1_400.gif\",\"https://64.media.tumblr.com/5503733ad469726e4316b8ef4e964f08/tumblr_pbw0pqfy9A1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/f8df301c949944a33d7c3ee20237c0a7/tumblr_osw27cS3rp1sqnvuno1_400.gif\", \"https://cdn.discordapp.com/attachments/740737933069516871/753429813284569118/image0.png\", \"https://64.media.tumblr.com/67f5d10636dc8d2db806b9c075d8c269/tumblr_pkk4b4EBJy1vqsfxmo1_1280.png\", \"https://64.media.tumblr.com/841fa7a3baba6188058a726f87997c85/6bb29efb99a82f8d-14/s1280x1920/88e444ec7752040c28ffd8f1d6f19980625146a3.jpg\", \"https://64.media.tumblr.com/b589c473b6f9edb93dadcf965f697d4c/6bb29efb99a82f8d-21/s1280x1920/3aad01d5c11c2a46d9d0e0a140c2e0c9cf3f3b26.jpg\", \"https://64.media.tumblr.com/a32024bab791acae93ea7e6a8b205e54/0b420392b8b050a1-6c/s1280x1920/27fb4913ddcb563134468dfe2a0192c3832b1941.jpg\", \"https://64.media.tumblr.com/fee1c40a8e01c60cf8f82f3e54737134/7c6b246399d0a2e1-f9/s540x810/91a6ae8dd9b68dab51f5ed6e4d41c9023ebf01b5.png\", \"https://cdn.discordapp.com/attachments/740737933069516871/753432751566225488/akechi.jpg\",\n\"https://64.media.tumblr.com/3f19996ceb6f412063bb2677af6b97fc/tumblr_pyvb465NFu1rns4m7o1_540.png\",\n\"https://64.media.tumblr.com/fcc8bb5e19c3e424528342a8c6329806/tumblr_orkmllYU7E1uhgdvpo1_1280.jpg\",\"https://64.media.tumblr.com/d90fb48224d4e2f8aea2bef55d44af52/tumblr_ooifo3Vnrw1uy59cto1_640.jpg\",\"https://64.media.tumblr.com/62cdc517b8ca8a068802177ba927858d/tumblr_phal4vcRoC1tcz4xu_1280.jpg\",\"https://64.media.tumblr.com/ef518e9ecd467c073a6e4295c5b9ffe4/tumblr_inline_osbhnqVnZM1qix85i_1280.jpg\",\"https://64.media.tumblr.com/340fd62c60fc8370c49f35e0a572e262/25571db00d558d1f-65/s400x600/631c3ee022ef84d8a86175bd6cb06d056346f216.gif\",\"https://64.media.tumblr.com/b127a921d99ffaa018caa11bccecde93/tumblr_pvmwrgnl7M1qfd51do3_500.gif\",\n\"https://64.media.tumblr.com/96b65f447bdb7e25f76975e7e839ab67/tumblr_oi4qzfcbtf1t8mwmro1_640.png\", \"https://64.media.tumblr.com/da5a531b199712666a6b9400f5f7f671/da686199b3d0ac8b-1c/s500x750/3cf77eaa17e6bad2ee018e249d1bb34bd317a24a.png\", \"https://64.media.tumblr.com/e894a9576d622fc99f71dc49b46b52e9/tumblr_pffy52AzeE1vgzd4so4_r1_400.gif\",\"https://pbs.twimg.com/media/DI7b82mWAAA_5ba.jpg\", \"https://64.media.tumblr.com/3378d7d37f53ff93588609a30fcfe821/tumblr_inline_p9lhg4DPkA1viryss_540.jpg\",\"https://64.media.tumblr.com/340fd62c60fc8370c49f35e0a572e262/25571db00d558d1f-65/s400x600/631c3ee022ef84d8a86175bd6cb06d056346f216.gif\", \"https://64.media.tumblr.com/b62ad5273b13011605659b33ffdb6ee4/0988b58245446062-6f/s400x600/ea522895e9a1ae663e177da81060010d543a39cf.gif\", \"https://cdn.discordapp.com/attachments/750210663372292186/754810282424926288/image0.jpg\", \"https://cdn.discordapp.com/attachments/750210663372292186/754809645360742400/image0.jpg\", \"https://64.media.tumblr.com/6bbdc328d2ced083a1a0dca107c82f47/619792edce1b58f3-ff/s500x750/f38324abc0b926a4deeb9d5c390f7f2664a9e448.png\", \"https://64.media.tumblr.com/b284defd8f0b0a3078b487f6abbc0c0c/tumblr_omboozzY3U1t8mwmro1_540.gif\", \"https://64.media.tumblr.com/db3e2d8640f1d5cf0fef44a1dc38a558/tumblr_omboozzY3U1t8mwmro2_540.gif\", \"https://64.media.tumblr.com/f5150b86c6bf7abcb30e870db2ab8e01/2e0f71e9b90bbbe2-dd/s640x960/a9a9b86ace87d5895f9fd7e8d2e883c2fcf7ef05.gif\", \"https://64.media.tumblr.com/feb43b251c4b0d3192a3bd776ce5fcb3/e21e8527b8f19667-14/s540x810/aa0abd433d34e65a29011dcda29ba853dcc4a453.gif\", \"https://i.pinimg.com/originals/7c/0b/85/7c0b85ffac85161a28952ab1defec852.gif\", \"https://i.pinimg.com/originals/aa/4e/3d/aa4e3d4032c5461e06efd0403c8dee63.gif\", \"https://media1.tenor.com/images/aacd29e05e01855d791bc3b164f8acf7/tenor.gif\", \"https://64.media.tumblr.com/81084aa9db7c95c878b6e64ce6e82fa1/tumblr_pcmmjtSpvE1vthyo6o1_540.gif\", \"https://64.media.tumblr.com/6743137dca19018d73764ed70835adad/tumblr_pa0k0yBlvf1vthyo6o2_r1_540.gif\", \"https://64.media.tumblr.com/7dec3412466abe7ef676579d3fa1624c/tumblr_pa2fpcGrd21vthyo6o3_540.gif\", \"https://64.media.tumblr.com/e79b4ecd54411b4b370da908953ec8b4/tumblr_p74knyC6981vthyo6o1_500.gif\", \"https://64.media.tumblr.com/d8a6500157b2f54c99d1599ed23cf2cb/tumblr_p69f3eMgzn1x6u4seo1_500.gif\", \"https://64.media.tumblr.com/62cf391fa782621916e891a51cf40c5a/tumblr_p1zqawIepM1vthyo6o1_250.gif\", \"https://64.media.tumblr.com/05c3ea5cc2d03819cb22259a69656b7a/tumblr_p1zqawIepM1vthyo6o2_250.gif\", \"https://64.media.tumblr.com/0f9cadeafe68fe237e280d3cdd29499a/tumblr_p19yxpkJh11vthyo6o2_400.gif\", \"https://64.media.tumblr.com/ea03759d9158e4b31d26e122129387ad/tumblr_p19yxpkJh11vthyo6o1_400.gif\", \"https://64.media.tumblr.com/3b032fb4fa4a250fada0c51077e2d9db/tumblr_oybsqzDs131vthyo6o1_r2_500.gif\", \"https://64.media.tumblr.com/038f8e9308c4f31fb532a4c81ba88fa9/tumblr_oybsqzDs131vthyo6o2_r1_500.gif\", \"https://64.media.tumblr.com/322a8025cebab79a973c85cf8ddbda6c/tumblr_ow454zgKPH1vthyo6o2_r4_250.gif\", \"https://64.media.tumblr.com/aab5c8fe500e15a311e6cb368f2a071f/tumblr_ow454zgKPH1vthyo6o4_r5_250.gif\", \"https://i.pinimg.com/originals/bb/67/85/bb678502b149c12a22767581966ac6f7.png\", \"https://i.pinimg.com/originals/b7/8a/96/b78a9659d1a36cdde2dc3b014716b3b2.jpg\", \"https://cdn.discordapp.com/attachments/750210663372292186/754836364687573092/67554985_369574400342392_619444221774534977_n.jpg\", \"https://64.media.tumblr.com/509cd9e846386db67709d2abc63d269d/tumblr_oqw0o38lbU1u7889mo3_r1_540.gif\", \"https://cdn.discordapp.com/attachments/750210663372292186/755170645775482970/image0.png\", \"https://cdn.discordapp.com/attachments/750210663372292186/755466066339037234/Eh8BW-WWkAARie5.jpg\", \"https://cdn.discordapp.com/attachments/750210663372292186/755465946675544144/Ehq19wjWAAEm20s.jpg\", \"https://vignette.wikia.nocookie.net/megamitensei/images/1/15/P5_MM_Illustration.jpg\", \"https://vignette.wikia.nocookie.net/megamitensei/images/8/8f/Akechi_mm_promo_art.png\", \"https://vignette.wikia.nocookie.net/megamitensei/images/4/42/MM_Akechi.png\", \"https://vignette.wikia.nocookie.net/megamitensei/images/1/15/MMCountdownAkechi.png\", \"https://vignette.wikia.nocookie.net/megamitensei/images/c/c9/Goro_Akechi_Theme_%28No_Background%29.png\", \"https://i.pinimg.com/originals/dd/49/01/dd4901bae99285c10194084c3b771a0c.gif\", \"https://i.pinimg.com/originals/d1/f3/41/d1f341ea3448e29bd8a67cfeb36da798.gif\", \"https://64.media.tumblr.com/36f681f87af5677f60d584ce393d1c1e/7abc2b1a6cd756d6-71/s400x600/3085cdae21e8a9d7becdbcb142c697273b27e0c0.gif\", \"https://64.media.tumblr.com/4924dc90a374a78dcbc63cb7b4c21be4/7abc2b1a6cd756d6-69/s400x600/5b125ebc6713d83dca328ed2ba7919d0d9097ea5.gif\", \"https://64.media.tumblr.com/feb43b251c4b0d3192a3bd776ce5fcb3/e21e8527b8f19667-14/s540x810/aa0abd433d34e65a29011dcda29ba853dcc4a453.gif\", \"https://cdn.discordapp.com/attachments/740737933069516871/756556421075828947/goroass.gif\", \"https://64.media.tumblr.com/1bb81f98ef598c9403543cfe17412f9b/e28a0088e91e4c6c-6e/s500x750/73e2804b9f5cc37efaa55de90fb35b325544fde2.gif\",  \"https://64.media.tumblr.com/14bc70b24aa646586aed4155a898de9e/02b4ef6596af7c6a-07/s1280x1920/2f06b312bbd8837f63ae4248019501fb71652ade.jpg\", \"https://64.media.tumblr.com/84511a59455e262dd1055e336a068c88/360c952ad0e28209-7a/s1280x1920/614d553d792016adbd25d66cd3ea9b3210a992cb.jpg\", \"https://64.media.tumblr.com/c2987548fbda91335483532e0093d3fe/93123f11ca8e78cf-c6/s2048x3072/b8b17198fe92477e4431c9ab66f38d4cf92ee42d.jpg\", \"https://64.media.tumblr.com/16a0fdca2abc0dbc671bb121189c6cfe/tumblr_pyv8yrjM7W1ro1j1mo1_500.png\", \"https://64.media.tumblr.com/40d44d1ec06eb8a666f4cc8ee5816640/tumblr_pnh9breaXV1xrizouo1_1280.png\", \"https://64.media.tumblr.com/765c29ecb179a3e88b4e12e95419af3a/69ef8a5fbbb340bd-ca/s1280x1920/6af8f14018304018bc58c59b03e6c2340778dba0.png\", \"https://64.media.tumblr.com/97d22c7d77d1d54ff7c2ce6b2fe7a76b/5724c2e95881fb25-3f/s1280x1920/118ff410ddf308ed6b0b4c2b5c9a31ccac83a616.jpg\", \"https://64.media.tumblr.com/f185319d25c0642b95f258eac133bb1d/9aa7a8e76b320d55-4e/s540x810/b361f09a037d7887f4ea8cedc2a4d34756bea6a4.gif\", \"https://64.media.tumblr.com/ed3ddbd7d05f4600648e86b791ee9211/9aa7a8e76b320d55-7a/s540x810/a1e6c012bcea81fbba22a9d57146b1c8b2f475b3.gif\", \"https://64.media.tumblr.com/757626503395cfc19ce32f750b9dc9cc/9aa7a8e76b320d55-2b/s540x810/24670fd3fca565e88e98293e00e4b7cbbd498460.gif\", \"https://pbs.twimg.com/media/EfoyJtYU8AERCkJ?format=jpg\", \"https://64.media.tumblr.com/5930352c79e1dab454f100a5f8b9087f/348380c7890f241f-59/s1280x1920/7bc48b2d1464719f78c9a9be90ecbc2d15caf2ea.jpg\", \"https://pbs.twimg.com/media/EfhbYdiU4AEGrEv?format=png\", \"https://pbs.twimg.com/media/EfhbIfKVoAALfpK?format=jpg\", \"https://64.media.tumblr.com/4ebf20ffda1cb903b8a808f258a20906/tumblr_otx6har1lu1wr0q6lo1_500.gif\", \"https://64.media.tumblr.com/31d849e01c369ca36a711ed5cf6be81a/tumblr_pbzrfsH7rT1x6u4seo2_540.gif\", \"https://pbs.twimg.com/media/DI7c3glXkAAAiEM?format=jpg\", \"https://pbs.twimg.com/media/DI7c3hsXUAA0bjV?format=jpg\", \"https://pbs.twimg.com/media/DB_d-NfW0AE6Qpy?format=jpg\", \"https://64.media.tumblr.com/871d0984d4164e68612f899a94f89616/d32bc503751e5ab2-31/s540x810/096dab7f05916df8c23cd0c2850477349c1d4a8a.gif\", \"https://64.media.tumblr.com/69bed751e4f5d95b42861e1d99c1d2f9/0d376cf69f84d615-0d/s1280x1920/0377ad83b1727cefd1168d4ea3d77bfe18b27122.png\", \"https://64.media.tumblr.com/dcc6b167ae6be2560b204642021cfd83/cc0a1229608ba929-6b/s500x750/7a0029fa45d766d45058815b5e1935d47706cad9.jpg\", \"https://64.media.tumblr.com/077df5693cf98f3b618664a432b36856/tumblr_ougo8zlpnf1wn6hn2o1_1280.png\", \"https://64.media.tumblr.com/e29008b25286e8d0371a9fbc00dc7196/tumblr_piq66m2Pid1scn34jo4_1280.png\", \"https://64.media.tumblr.com/5a6dd8fb616ec443e4628ab58e10eb14/c15d9215361e5abc-e7/s540x810/3baf7b468f15d335b58a9de2c6455401d018d313.gif\", \"https://64.media.tumblr.com/13c9f657dad085494add15b610d73661/82b238aaf227a4e6-27/s540x810/beec5980bdf7ed0830f1e7255b2a948bbe27c15c.gif\", \"https://64.media.tumblr.com/a9e4090b7993f792d6c3d10e52e878c2/82b238aaf227a4e6-ab/s540x810/aff3d623b3392112afaabe82c3ebdcd529425a2b.gif\", \"https://64.media.tumblr.com/c9cd7995205ae888ded45552e0495aac/tumblr_pvm4tpmNmC1we6z1vo1_540.gif\", \"https://64.media.tumblr.com/27f014e800f043c48c388c6e2e6766f4/tumblr_pvm4tpmNmC1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/98c556f892242c0f29441e2d64b3eea8/tumblr_pvm4tpmNmC1we6z1vo4_540.gif\", \"https://64.media.tumblr.com/8224d1d794b1dea0a697e1aa0ffbe522/c7f829014610a8b3-6b/s540x810/d360b70716befa31d9ada734cfb186fbc825bc7e.gif\", \"https://64.media.tumblr.com/7d097974e13491fcf53dc73d1c0b0ffd/0d46d78602d7297a-dd/s1280x1920/a02d56b7650d345afc95f3db0bcae19029f88d21.jpg\", \"https://64.media.tumblr.com/9d1de767d8cedec5395721919875bff2/tumblr_psdz3uybUd1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/0814edec76065b9cec2577a28a6ec3c2/tumblr_psdz3uybUd1we6z1vo1_540.gif\", \"https://64.media.tumblr.com/f849b030dc6f3b518905da6053717404/tumblr_pskmgkKAHn1we6z1vo1_400.gif\", \"https://64.media.tumblr.com/f765103b2de9d23b6e17fd3a658b8e66/tumblr_pskmgkKAHn1we6z1vo2_400.gif\", \"https://64.media.tumblr.com/85308cb597d35a4a80f71cf414cf2914/tumblr_pttbj8uF1S1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/c31a90684a820d6e65c707b420a5404a/tumblr_pweoejB1Cq1we6z1vo8_400.gif\", \"https://64.media.tumblr.com/cfd3aa5dc570eaa8b2c68bd26d42b7af/bc9b6bb50117a220-73/s640x960/4253ee8e47a8008289dd2454457b3401c8b26faa.jpg\", \"https://64.media.tumblr.com/9436e305a7a42d08403ca93bb25b21b8/bc9b6bb50117a220-3b/s640x960/ac3f2ce1829a6e9f0e68997423e422295c52acd3.jpg\", \"https://64.media.tumblr.com/dbe0ead7b3b0ae015da376478990e98d/bc9b6bb50117a220-c1/s640x960/ba28140f96c0c284893bb6bbccbe4306ef0c507d.jpg\", \"https://64.media.tumblr.com/27dbaa606f9a7aa8debc8fd8110a256f/bc9b6bb50117a220-e8/s640x960/50bc25e9c87b4883327674777aefe88d75018a2c.jpg\", \"https://64.media.tumblr.com/de457843163945c74aa34fffef6fe03f/975a203ce0e37730-06/s540x810/f4deb4e94707d53022abb4d16e7ec9c9b8537ec9.gif\", \"https://64.media.tumblr.com/fb55c436569d9c6012748f6cad82633f/d1a9800b5f0734f9-43/s540x810/d5dc3977eb64129ee4de42e28480ba6f26004843.gif\", \"https://64.media.tumblr.com/8de1cffaa447f3a52bf7d57efa72aead/85012893db1a4f94-bd/s540x810/9ae688a3f4fd1421d607eef5f6f592000686e41a.gif\", \"https://pbs.twimg.com/media/EfWDRsDXsAMVYgt.jpg\", \"https://pbs.twimg.com/media/D6TWP4MW0AEU9yx?format=jpg\", \"https://pbs.twimg.com/media/EC3BGKHXUAA1EPl?format=jpg\", \"https://pbs.twimg.com/media/ECNnlJfXUAAFMsn?format=jpg\", \"https://pbs.twimg.com/media/ECOyFE8WwAA1AZ4?format=jpg\", \"https://pbs.twimg.com/media/D7EE5dyWwAECXGf?format=jpg\", \"https://pbs.twimg.com/media/D4MvdbzW0AM4A3t?format=jpg\", \"https://pbs.twimg.com/media/D4JZRgIWkAAzs8v?format=jpg\", \"https://i.pinimg.com/originals/e4/c0/d0/e4c0d0ae12d9cdad214c13bfcaf53ca1.jpg\", \"https://pbs.twimg.com/media/EUIUt6AXQAMWJN2?format=jpg\", \"https://pbs.twimg.com/media/D3C4jOFWwAIaA_M?format=jpg\",  \"https://64.media.tumblr.com/75f952f4fb88f9a6482ed29fc5c9831a/fbf7c4fd32991635-07/s400x600/42f2b91fd8d0652c7eccc052a86caf8e5e467116.gif\", \"https://64.media.tumblr.com/959b479092f2fab5aa143af488b64bd2/ed821357d55f5442-16/s1280x1920/43aa8009997695d9e03215915197d1f05d81a36e.png\", \"https://64.media.tumblr.com/dd4f30d4728874f01cde4f8d7480d2a4/1a9d68d3cf70e2c2-9a/s540x810/c4993a646db73f6e012118af8484f41886544f56.gif\", \"https://64.media.tumblr.com/8d417bd9f07f21abc8279f93565a6124/1a9d68d3cf70e2c2-f2/s540x810/63ca782935c913fd4441ad13a8fb7a6f46b02698.gif\", \"https://64.media.tumblr.com/dc1a123f642f403fbac2e7fa54cd016b/1a9d68d3cf70e2c2-76/s540x810/7a056001375fb59b66bf6a9f73647ed145d165c9.gif\", \"https://64.media.tumblr.com/4164268b14597eeecea4b10c578f2abb/70914d1600c6e2dd-4a/s640x960/fba1a52b13b050818bc99eee2821a79f599ecc70.png\", \"https://64.media.tumblr.com/3af9d7d7ce751a0cec7bb5c668480869/73402c8cb45e81ae-8b/s1280x1920/7aae491d990f04e6bfb6396484ca28b6d3790246.png\", \"https://pbs.twimg.com/media/EUkk2oAUMAQtIp3.jpg\",  \"https://vignette.wikia.nocookie.net/megamitensei/images/8/8f/Akechi_mm_promo_art.png\", \"https://64.media.tumblr.com/057914729eed2ae9657ea2adf9361855/tumblr_pxwhdaGeKn1wnsicho3_640.png\", \"https://64.media.tumblr.com/791a9ace90b562fecd9145e60590ed3d/c8c13c0c0aa8c7ad-ee/s540x810/c6ef8e1a9cd66cde209319d1355fd1d234e7c465.png\", \"https://64.media.tumblr.com/7707c81b5ec14719df0f173c9efb8109/813ca8a47492740e-b3/s2048x3072/03be0d030f55f5fb75ddcd396c1fa1a76271e889.png\", \"https://64.media.tumblr.com/6a8d5aaefcb39bc54bdff5a78f78960b/3bd1702a5920be77-e2/s1280x1920/fd22a0dc48afc92a2cb4b45505384a017ba943b3.png\", \"https://64.media.tumblr.com/4d6b64a5dafa82921aae0f3568803385/tumblr_pkno69NEa11qa94xto1_540.gif\", \"https://pbs.twimg.com/media/EUkktwSUYAAOMRn?format=jpg\", \"https://pbs.twimg.com/media/EUpsuYKUwAAwyYv?format=png\", \"https://64.media.tumblr.com/45fa37545168403672befee5ffe536a3/a3377521726bb916-9a/s1280x1920/bcbbdeccb3adaa82fbfa8ea48e1683d42ac3afbd.jpg\", \"https://64.media.tumblr.com/47644251eaf8618594b5ff2c24ee0de4/aa87514762d0154d-ec/s1280x1920/85cf7e48e627bbf31aad3d3ae5a293d27ca9ecaa.jpg\",  \"https://64.media.tumblr.com/12514529168c48b8b67801053cc65843/5082ae4b88c03e83-97/s640x960/81985ab4ec8c8d05fc234beb8a2ece3e7d5d0feb.jpg\", \"https://64.media.tumblr.com/5765ef98c065d1f2abb9ecf712dd36cc/889773508667116a-88/s1280x1920/ada5802d825c63f0c562e9e0f1d4dd2b62c2a03d.jpg\", \"https://64.media.tumblr.com/804eed462782aeda6c2dca3d34986046/a0c741a6833d3c0d-6a/s1280x1920/e292939c22e1ca010c903506196c9cf9dc8e47b0.jpg\", \"https://64.media.tumblr.com/7e1b29c2caebf8d0c034689047f1d448/66282663a9f0f68e-d5/s1280x1920/e27c1ad1a592c232673b18e1651bfbd161105c27.jpg\", \"https://64.media.tumblr.com/0b92d8bee19b34532c2c1d63f5a9f18f/91a31161be26ea0d-05/s1280x1920/03d63cecb716bb401eae66552c2ab8b4f2e584b9.jpg\", \"https://64.media.tumblr.com/fe64c0bfc778359faa2308bf5b0b37ff/caddbcaa68d0153e-7a/s1280x1920/63f39783c68c086124892c0c30ad3fa563ee073e.jpg\", \"https://64.media.tumblr.com/7d668fdfc72a203078f32eba964d1ea2/27620ab680405c02-3f/s540x810/40b958cb82f0f5d5635920839f1e0a2096688b23.gif\", \"https://64.media.tumblr.com/ecdfbeac7ba23a52fc621b9d21938203/27620ab680405c02-07/s540x810/401af0a169c4b3caed578fe1d16c6457c557e0ef.gif\", \"https://64.media.tumblr.com/19f3a868ba03486ccf0de77d9a5f72ed/27620ab680405c02-f2/s540x810/1bd1db6e487f23b40a09bdd54a5afda6f4f4836e.gif\", \"https://64.media.tumblr.com/d6ec445ce768ec132bce381ad0ba8755/27620ab680405c02-f9/s540x810/34a31acb177e3c848c2a5e2c8d9f283fe7f3d148.gif\", \"https://64.media.tumblr.com/2e9e7e18814a63dfdebf4a9182d631e6/80be717f40f67773-fe/s400x600/886e3f647af8989671707a0d34c4e3ce0e1a318f.gif\", \"https://64.media.tumblr.com/273ffb8a678b8411ad135ee07c746c93/tumblr_p9ms0zNvaw1wrcccjo4_1280.jpg\", \"https://64.media.tumblr.com/730e14f282236932bc3024752f136f77/tumblr_pkexdjNyEG1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/cb223b9082aa6c95e3e4073c7dfca5b6/tumblr_pkexdjNyEG1x6u4seo2_540.gif\", \"https://64.media.tumblr.com/f330cea34c5fcb3f00ea8cec21d3a8f6/6cd40520a8912a2a-f1/s540x810/f9297a9ef65c6a24246ea3e3129aa059f360e4f2.gif\", \"https://64.media.tumblr.com/0563406f07ba6ade5d94553e19c037d8/2ff335f699efb8d4-e7/s540x810/a92d8d00a836c5af5adca4571ad41b9dea07fa4f.gif\", \"https://64.media.tumblr.com/fbf8b2f9deab9028c59df113158069b0/27b655190e08eeaf-c0/s540x810/5025cb74a1d8997422f844c32e12bee541994c08.gif\", \"https://cdn.discordapp.com/attachments/750210663372292186/763958790538133574/image0.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/765649109113503744/image0.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/765649122270773268/image0.png\", \"https://cdn.discordapp.com/attachments/750226726566756443/765649085126148167/image0.jpg\", \"https://64.media.tumblr.com/c3d3452bc02b34493c4bdb034f5a3640/c3af4f18af042b0e-c2/s400x600/9b8b26fdf7257976b5f9a326e9750ce19e91be48.gif\", \"https://64.media.tumblr.com/4f7c3fe50733d89e361500c19f603f84/c3af4f18af042b0e-07/s400x600/3fa82d6ac78aef69617dfce29a500c4b2505d8c9.gif\", \"https://pbs.twimg.com/media/Ei89sJHWoAANdYC?format=jpg&name=medium\", \"https://pbs.twimg.com/media/Eidg3aWXgAACdaU?format=jpg&name=medium\", \"https://pbs.twimg.com/media/EiDQFkvXgAcevfJ?format=jpg&name=900x900\", \"https://pbs.twimg.com/media/Ed4GSB8X0AA_i2R.jpg\", \"https://pbs.twimg.com/media/EbFrEmyUcAEenXF?format=png&name=small\", \"https://pbs.twimg.com/media/EgYMKDKXYAAb4i3?format=png&name=small\", \"https://64.media.tumblr.com/a6673f6b64a39af2f44a4336c8d0d530/tumblr_p5hbk5PFrZ1vthyo6o2_r1_540.gif\", \"https://64.media.tumblr.com/51d43aa1fbcc34010526ef12d476ebdd/tumblr_p5hbk5PFrZ1vthyo6o4_540.gif\", \"https://64.media.tumblr.com/81b306a8ed11863805036a9cfaafaa01/tumblr_p5hbk5PFrZ1vthyo6o3_540.gif\", \"https://64.media.tumblr.com/b502efc2a09d68adf437d04aeb5a7ba7/tumblr_p5hbk5PFrZ1vthyo6o5_540.gif\", \"https://64.media.tumblr.com/390eb94470dc817bd27a203373126c6a/tumblr_pftzbheFu01x6u4seo2_540.gif\", \"https://64.media.tumblr.com/4d6b64a5dafa82921aae0f3568803385/tumblr_pkno69NEa11qa94xto1_500.gif\", \"https://64.media.tumblr.com/a28bbd31606766b02ca7f08462294a80/tumblr_pucb24kWHo1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/2a63bdcd2fa6bbf21d1fc49d96142297/tumblr_p6m75vd08q1vthyo6o1_500.gif\", \"https://64.media.tumblr.com/02748d3f7d51802c2ba8b0e3be9ea2c7/tumblr_owmugtqGDj1vthyo6o1_r2_250.gif\", \"https://64.media.tumblr.com/aea275fffd1347402b3004cf0634be07/tumblr_ox7tpm8q7H1vthyo6o4_250.gif\", \"https://64.media.tumblr.com/d4a2b0b2ac4ad184161f395f2269d843/tumblr_ox7tpm8q7H1vthyo6o5_250.gif\", \"https://64.media.tumblr.com/df9a1d5d60f5175539dc1257cbcdd7f5/tumblr_ovvnw43k1h1vthyo6o2_250.gif\", \"https://64.media.tumblr.com/9da0d26d48914356147459fdd7cd14e8/tumblr_oxlvijXCMa1vthyo6o1_r1_250.gif\", \"https://64.media.tumblr.com/33cf1adc863259dfe7e530e9660662f8/tumblr_oxlvijXCMa1vthyo6o2_r1_250.gif\", \"https://64.media.tumblr.com/30c8851ffd9d420d874ccacae40e7797/tumblr_ov3r8hPV0e1vthyo6o7_r1_400.gif\", \"https://64.media.tumblr.com/b13340c77b3457cfa59165ad7b9bcc95/tumblr_oxvq8wHpzN1vthyo6o4_r2_500.png\", \"https://64.media.tumblr.com/b45d0dc84741bd066cd91a30c4d930cc/1c48a954701d54ff-1d/s540x810/31c830a2dc20224e087e18d26951a61c97ae0cdb.gif\", \"https://64.media.tumblr.com/37c680ca29239fafcf4b613c78f8e752/9b8962bbc907746c-c2/s540x810/80a2b01bf4b1eed494775a4a05ad5ceb03ba6744.gif\", \"https://64.media.tumblr.com/12600f4054bcfbcc4e4dfba95076e315/9b8962bbc907746c-a4/s540x810/b5db05052b123d038832f5ed2e2b34ed322b2cd6.gif\", \"https://64.media.tumblr.com/6029d5c40d6f46f381304c9640345ee9/df353587354717be-12/s540x810/7edf790c7fa0612a839bf2876373ede935451759.gif\", \"https://64.media.tumblr.com/6e56aed6bd379b8f7bba12165bdf6f2f/tumblr_pf4927mPa71vthyo6o1_540.gif\", \"https://64.media.tumblr.com/2f77fb8d845b0332a8af62a3e9f74899/tumblr_pb5s18ZgVi1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/11afaea66580784adad41dc8f10bab37/tumblr_p9rf8bG6Cd1xvza3eo3_r2_540.gif\", \"https://64.media.tumblr.com/560afd98f19fb698e0731717398f7d6f/tumblr_p9rf8bG6Cd1xvza3eo4_r1_540.gif\", \"https://64.media.tumblr.com/7b3b54ac4c8133df3c6f08babec14e12/tumblr_p9rf8bG6Cd1xvza3eo6_r1_540.gif\", \"https://64.media.tumblr.com/7c80b7a02c94e82c539467e0a7278083/tumblr_p6mh8cj6MO1vthyo6o1_500.gif\", \"https://64.media.tumblr.com/f7962237d4cea26a3d0accd3bfe7198b/4082e2e472b716f8-30/s1280x1920/5701f35a93644df76d6df55aa7ef494131e65eae.gif\", \"https://64.media.tumblr.com/020ce45cd1e187f6f8f3568340bd1bae/tumblr_pb6obmsQvp1rs8tloo2_540.gif\", \"https://64.media.tumblr.com/fdf385c3ecf2232483544b4684347a31/tumblr_pb6obmsQvp1rs8tloo1_540.gif\", \"https://pbs.twimg.com/media/Ee4paEQWAAAR8VE?format=jpg&name=large\", \"https://pbs.twimg.com/media/EZ_y2dTXkAEI8Ve?format=jpg&name=360x360\", \"https://64.media.tumblr.com/bfedef43df707ac3cfd59df2fc04e219/3875f5c3c73036db-ea/s1280x1920/dbbd3746fa1d3e4dde0ed3ffb574c2790bb86007.png\", \"https://64.media.tumblr.com/6b8defc670ea274bf36b267eebd1dee4/097ad01f6006819c-87/s640x960/bede5a834ca6e56843001fcf2ac5fbec2030158a.jpg\", \"https://64.media.tumblr.com/0a0acc523a22c8399663a3ba917948e0/d6f8c2a79a9242eb-41/s500x750/a71f687e437eeb4dd9b47a5c0757ace257299a5e.png\", \"https://64.media.tumblr.com/afd74b38938b38194ee1e8bc32cfbe47/78a29fd53197578f-12/s500x750/25de61bfd484a089cb82f88773ab692543cc2dc3.gif\", \"https://64.media.tumblr.com/bebbf01782b418c25c1594805b732225/tumblr_inline_orbh3uN7kz1shg9ex_500.png\", \"https://64.media.tumblr.com/cea9cf176cd5c9af3cbed86a91aa25eb/tumblr_orafxpXs201vrpn4eo1_1280.png\", \"https://64.media.tumblr.com/22132931a534937138e1056c9a08b64e/d38299cf47f5530f-48/s500x750/4dee3ea7df2a1dab291ceed6b53df357a008e208.png\", \"https://64.media.tumblr.com/c1368955622b1237f961ae6a59983275/445b84fd54d2362c-38/s540x810/4673d81165bde65568c3524e9c6beb1f28553541.gif\", \"https://64.media.tumblr.com/ff1115ce8741f7356c4e13875afccb4e/445b84fd54d2362c-3e/s540x810/701d09128d847aaf7475a89e7dbe67c693b6c1b8.gif\", \"https://64.media.tumblr.com/e22000e13eaacffbb9f6306d0a47d07f/6626b19bf12124b8-ca/s540x810/01561382d570b7623f7a9649e9552e3c0930a13e.gif\", \"https://64.media.tumblr.com/e3560f0e43e53ac5d4882cd6f6498447/tumblr_ov1iepUtPw1vthyo6o3_r3_250.gif\", \"https://64.media.tumblr.com/e8aa63bd17d7e80b24a8b6e2da04f935/tumblr_ov1iepUtPw1vthyo6o1_r3_250.gif\", \"https://64.media.tumblr.com/3ab8c6f4e9eb0ab2490350b042527861/10bd77a3699cf169-0a/s500x750/99c4df927577e03018b7d59630ba053837d3d0ca.jpg\", \"https://64.media.tumblr.com/2e5c927e8a326afc8b9ad475eb527b7b/0b6c81bb2e341644-74/s1280x1920/50833a94cef01232c9d2421356a4fcb5fe98c2ef.png\", \"https://64.media.tumblr.com/bf97aac40a6afb5a58f9d78afced11b8/tumblr_pflystImL11qja52b_500.jpg\", \"https://64.media.tumblr.com/60e75d36cb8a5d2e55fe4d1bddf93882/10fe6ec1b9f69c27-7a/s500x750/59cf47bd2cba8e2428dee4400d9547e7a88ec9bf.gif\", \"https://64.media.tumblr.com/4b97f711aeec7c54a7bbac0923bffaa4/tumblr_p60mfl6CgK1vthyo6o1_500.gif\", \"https://64.media.tumblr.com/263ffe1ecb71e8e6856ba7b31cc118b4/tumblr_p60mfl6CgK1vthyo6o3_500.gif\", \"https://64.media.tumblr.com/52a3b51469d00f15cac22601b25e185d/93563e052e9a09fa-fe/s400x600/0f45c063a899d16748148cae07d0a5fc35554fff.gif\", \"https://64.media.tumblr.com/b48588e78a04ee7b3488ac52eff632ff/51f7783b1b680acd-a8/s500x750/2d00f0f1995e1f6cc37e6c31ff1570bcec39b42a.gif\", \"https://64.media.tumblr.com/ef35b514ed2d24e29940ae1b522ad838/tumblr_pb5mjprLyf1wfazcjo2_540.gif\", \"https://64.media.tumblr.com/fa007ed7de3d4abb2dfc3aea05f5f0d3/tumblr_pb5mjprLyf1wfazcjo3_540.gif\", \"https://64.media.tumblr.com/a1eb960671c3973a0eaf4d3e61c1bd9e/tumblr_pvt58cc4161x2iq47o1_400.gif\", \"https://64.media.tumblr.com/f19914dedff0e88adba2fb87f60853c8/tumblr_p82mc3ulga1xrizouo1_1280.jpg\", \"https://64.media.tumblr.com/13fb836cf598f967bc1cdbc54e45c5fb/tumblr_px61oziOpE1wnsicho1_640.png\", \"https://64.media.tumblr.com/086c269baa96ce5c38b9165fe36621f8/tumblr_pvmch60pe11qfd51do1_500.gif\", \"https://64.media.tumblr.com/9ca3a5941d931d3c71c0b5fe5e35cf0d/tumblr_pvm0t8ca821rtkhhpo1_1280.png\", \"https://64.media.tumblr.com/0f881f136a33a2eaf3a12bb16d5d47c3/tumblr_pth3mkxJdE1tfpjwm_500.jpg\", \"https://64.media.tumblr.com/b40594cd4b359fcce5089a45b7f7db98/7b3250922a0540bb-63/s400x600/fe5dc85c80fc4f54dcfda0d35b4541530f4d7e7d.gif\", \"https://64.media.tumblr.com/fac2bb7450fb25416d51f28bd85ae6f9/7b3250922a0540bb-ed/s400x600/84f8c8ba7a3d2d6d65547f55ff7ed12c5610de7e.gif\", \"https://64.media.tumblr.com/c037edbe8db02c5ce57994afaa4d6594/7b3250922a0540bb-16/s400x600/01e0e4a27d7221ec0fdc7708f99afcb02eee79d6.gif\", \"https://64.media.tumblr.com/2b0c61b2b74ef4203722c4194b604401/1805e4d14233eaa0-06/s1280x1920/ce8918cf51d138b04435c4b03ce9f6e5df0ab965.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/772598029022003220/image0.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/771882611470630912/image0.jpg\", \"https://64.media.tumblr.com/17b43461e182bd7294e9c4ba48c6d59e/a8691f39e5d6b7a9-a3/s2048x3072/1b223db33e97c44c07f9319668f512f63e3f98da.png\", \"https://64.media.tumblr.com/7d71e01addf9b9305be46d0cb0c57507/37e81a0be0fdb94f-52/s2048x3072/97be8e1a1db7c99cdccb9bb1b27ea55cc68e2df0.jpg\", \"https://64.media.tumblr.com/e38bc029fae82eb9246a5fb3c7475956/d5fed8a6331a2d5f-ec/s1280x1920/3be215a0f0bf5c1670d590876cc01e8adfffd76f.png\", \"https://64.media.tumblr.com/21770583a9d7571660b28c15265f64a9/0689745cc0e829a1-c6/s1280x1920/a11a828ced83f03973858618127770df12fb82a3.jpg\", \"https://64.media.tumblr.com/fa3c3b90d3aba3dfade311c1956542ed/3155957329501bbb-3f/s1280x1920/a55ee5c7917bf85b26de07522498d6f614827b25.jpg\", \"https://64.media.tumblr.com/73a4e7b24249073f4477928cb74514ff/aa4c997eec14e509-b1/s1280x1920/fb6874c82c85b8671b393d9dd20c03981e5cbcb2.png\", \"https://64.media.tumblr.com/5de14964a9af954c9cbb444fe8fab0e4/b2024bbd04c01929-cc/s1280x1920/b1b5def0d7e2d4b67df1472129ba0555db5f58c7.jpg\",\"https://64.media.tumblr.com/844c44e04d64219e4dff1113378381b8/b7d2f557dcc18bf4-88/s1280x1920/1786d79ebf2d62f62cabea668737900e850778e1.jpg\", \"https://64.media.tumblr.com/209209eb9ec2869d341c0e1da6a5f1cb/6beb650ca611764e-f0/s1280x1920/ececb281bcb6048fd5a8bd4fe1eb91be528660d3.png\", \"https://64.media.tumblr.com/0b9d89ff1cf8caa21ede82d3d398af9f/fe5491ca70c9a772-19/s1280x1920/c93bb9c505be71c806442727057f8d19e504b052.png\", \"https://64.media.tumblr.com/2d2702008d327d666e14c8bdd478b1f1/9ec348bd1124c2d5-b1/s500x750/2bea88eb61048d63a6be99dcd6acef4a53ce6032.jpg\", \"https://64.media.tumblr.com/954b0dde6bba52e086e1cb2915f5a186/b9127250cd964760-aa/s640x960/8e258d8dc4419251e6527431caebce8d46f6e0e0.jpg\", \"https://64.media.tumblr.com/fd245edb9fe8280e1ae5133cfd6c1993/532bd00bcbe423c0-77/s500x750/9824f0fa1b76a4ecf94be1f83978a1e430dd299e.jpg\", \"https://64.media.tumblr.com/c407f0e709c775a8992c172313551b6c/58e676812ca13cc8-47/s500x750/3aec890aaac7b0ee23c22daff6a5c30fbdc14a4c.jpg\", \"https://64.media.tumblr.com/14b56c895c675de83886d1dc0de79da1/c89e2ea4a59fb6e8-c4/s500x750/60640075d884a4592741db19b971bfe490789bef.jpg\", \"https://64.media.tumblr.com/16c8680352f5d28f5ea81ae863ac8344/defb9ad344c090cf-2e/s2048x3072/ea477b6fbd9135e6467f156729b19ccd0c1caebd.png\", \"https://64.media.tumblr.com/d23da2f68e141074b5e3b21790425943/tumblr_pq4iokU2cr1xrizouo1_1280.png\", \"https://64.media.tumblr.com/77f41fd36aef78b11daa1abc14e02719/tumblr_poscvkdBxX1xrizouo1_640.png\", \"https://64.media.tumblr.com/72a5f68abf34b94ca11a3c169b779308/tumblr_pp1n3cQxJY1xrizouo1_1280.png\", \"https://64.media.tumblr.com/14c45a61e0029efd35f2f34dddbbe413/tumblr_po3gwcpPdZ1xrizouo1_1280.png\", \"https://64.media.tumblr.com/eece7a776912d14458e85550bed25b0d/tumblr_poscdnQw451xrizouo1_640.png\", \"https://64.media.tumblr.com/8f0e6221477656ffe14d91a90a3d4ef4/tumblr_pnko2eNQTK1xrizouo1_1280.png\", \"https://64.media.tumblr.com/d193923549795c6999e921ca5c1bb6a7/tumblr_pna4dne4AL1xrizouo1_1280.png\", \"https://64.media.tumblr.com/d1553a7cd8f5de47e54e7f2791988c6c/tumblr_pjjzekYZhX1xrizouo1_1280.png\", \"https://64.media.tumblr.com/e2e5d891caada160769cf707ff3e37df/d1c87a6dee8908fb-2a/s1280x1920/60d949b72ff7bd2460ba1567b32fa96d5925cb46.jpg\", \"https://cdn.discordapp.com/attachments/740644723793985599/749082669463371796/image0.png\", \"https://64.media.tumblr.com/1189edc9bae4f435dd420c151957e2d9/6bb29efb99a82f8d-62/s500x750/bbe974214c3620515d6b721f963a5f9e8eb61f7d.jpg\", \"https://64.media.tumblr.com/c7c30c8f0b5f5e83563818e0355c7a54/e4e3b14c3d59b90b-57/s2048x3072/5b329db159e1a63cfb53a452f2e7430c96ace86b.png\", \"https://64.media.tumblr.com/86916256e2ce0d7367130007a520a303/d81d5aa761c13893-d5/s1280x1920/01207dc5706a4fd14e66fb560478af20bd82e2d4.png\", \"https://64.media.tumblr.com/fd2ccbd3891fab2093e06c5319d67c46/96b8759e2391bbca-d1/s1280x1920/67cf72f1037d5831589a3cffc17d83c8ff7babc9.png\", \"https://64.media.tumblr.com/dcc8bf763097fab968857dde5c5df596/tumblr_pnhbhmybhS1vqsfxmo1_640.png\", \"https://64.media.tumblr.com/f4a742db292bfe4c22bfa80d31234537/tumblr_pvm45cSuAu1we6z1vo1_540.gif\", \"https://64.media.tumblr.com/1891ff8b70b1fa2d64f6bec00b88dbd7/tumblr_pvm45cSuAu1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/8e4dbfe50a9b4d1f482904c4cd36c6b4/tumblr_pvm3slqeP91we6z1vo2_540.gif\", \"https://64.media.tumblr.com/8947a2bb24a97589608682479c0af35d/tumblr_psqkn4rZ3k1we6z1vo2_400.gif\", \"https://64.media.tumblr.com/48b7206a5be6b9e9e23111ce43a01d4e/tumblr_pfpp94zty91vgzd4so5_r1_540.gif\", \"https://64.media.tumblr.com/2bb4df36112376ca31a031007d396266/tumblr_pfpp94zty91vgzd4so7_r1_540.gif\", \"https://64.media.tumblr.com/72b2bfec21f3b77723a4d0c5c3e7fc84/tumblr_pbil2omMJP1w0hrkno1_540.gif\", \"https://64.media.tumblr.com/8f5936598326aeb08c5ff0967cf51889/tumblr_pezkftEtsa1vgzd4so9_r1_540.gif\", \"https://64.media.tumblr.com/eec4ffb997810e56328613c59f3dfc20/tumblr_pasg459gWE1rztjsno3_400.gif\", \"https://64.media.tumblr.com/ec01b71d2459bca5b086cd7a6d624e17/tumblr_pasg459gWE1rztjsno4_400.gif\", \"https://64.media.tumblr.com/55b050789f8af788325874af5fac039f/6eccda68f0742e00-66/s540x810/7344a3f183a57bd0de70c713d98282ff7530b40d.gif\", \"https://64.media.tumblr.com/a2835fbc20cc8e78ad6755fb41f0677a/7a830d10891866ba-54/s640x960/37bbcb36494c87fb556ee4c367e0ad0785265ca5.png\", \"https://64.media.tumblr.com/71ad8d506e0929635bb3366dd9ffcee3/tumblr_pvczxoWYP81qfd51do4_400.gif\", \"https://64.media.tumblr.com/acd09a34cdb981a7f5f0a5d8bfe54c60/tumblr_pvczxoWYP81qfd51do9_400.gif\", \"https://cdn.discordapp.com/attachments/740672032714391613/788776929205026816/image0.jpg\"]\nconst randomImage = images[Math.floor(Math.random() * images.length)]\nmsg.channel.send(new DiscordJS.MessageEmbed().setImage(randomImage))",
-        "storage": "0",
-        "varName": "",
-        "name": "Run Script"
-      }
-    ]
-  },
-  {
-    "name": "Triggers",
-    "permissions": "NONE",
-    "restriction": "1",
-    "actions": [
-      {
-        "title": "",
-        "author": "",
-        "color": "#a48252",
-        "timestamp": "false",
-        "url": "",
-        "authorIcon": "",
-        "imageUrl": "",
-        "thumbUrl": "",
-        "storage": "1",
-        "varName": "msg",
-        "name": "Create Embed Message"
-      },
-      {
-        "storage": "1",
-        "varName": "msg",
-        "message": "**1.** hello/hey/hi [his name]\n**2.** goodnight [his name]\n**3.** good morning [his name]\n**4.** honey i'm home\n**5.** i love you [his name]\n**6.** i love you sumi/sumire\n**7.** i love you akira/ren/joker\n**8.** hello lgbtq community\n**9.** TANK\n",
-        "name": "Set Embed Description"
-      },
-      {
-        "storage": "1",
-        "varName": "msg",
-        "channel": "0",
-        "varName2": "",
-        "name": "Send Embed Message"
-      }
-    ],
-    "_id": "NUxOj"
-  },
-  {
-    "name": "Shoot",
-    "permissions": "NONE",
-    "restriction": "1",
-    "actions": [
-      {
-        "condition": "1",
-        "comparison": "0",
-        "value": "1",
-        "iftrue": "3",
-        "iftrueVal": "2",
-        "iffalse": "0",
-        "iffalseVal": "",
-        "name": "Check Parameters"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "```\nMention a user in order to use this command!\n```",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "Case closed. This is how your 'justice' ends. *<@518624245933408292> shot ${mentionedUser}* :gun:",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      }
-    ],
-    "_id": "pRUXW"
+    "_aliases": [],
+    "comType": "0"
   },
   {
     "name": "Say",
@@ -174,30 +89,6 @@
     "_id": "uOvLa"
   },
   {
-    "name": "518624245933408292",
-    "permissions": "NONE",
-    "restriction": "1",
-    "_id": "fTPuB",
-    "actions": [
-      {
-        "storage": "1",
-        "varName": "rand-num",
-        "min": "1",
-        "max": "24",
-        "name": "Generate Random Number"
-      },
-      {
-        "behavior": "0",
-        "interpretation": "0",
-        "code": "switch(tempVars(\"rand-num\")){\ncase 1: msg.channel.send(\"Don't lecture me, you piece of shit...\"); break;\ncase 2: msg.channel.send(\"That's not funny at all. It's disturbing.\"); break;\ncase 3: msg.channel.send(\"Even if I only have a little time, I'd like to spend it with you.\"); break;\ncase 4: msg.channel.send(\"If only there was someone who loved you.\"); break;\ncase 5: msg.channel.send(\"Teammates!? Friends!? To hell with that!\"); break;\ncase 6: msg.channel.send(\"Justice? Righteousness!? Keep that shit to yourselves!\"); break;\ncase 7: msg.channel.send(\"Pancakes… I never want to hear that word again for a long, *long* time.\"); break;\ncase 8: msg.channel.send(\"Oh, am I mistaken? I thought I heard something about pancakes...\"); break;\ncase 9: msg.channel.send(\"I am an ace detective… a celebrity! But you… you’re just some criminal trash living in an attic! **SO HOW…!?**\"); break;\ncase 10: msg.channel.send(\"In the end... I couldn't be special...\"); break;\ncase 11: msg.channel.send(\"My SKILLS exceeds yours!\"); break;\ncase 12: msg.channel.send(\"Case closed. This is how your 'justice' ends.\"); break;\ncase 13: msg.channel.send(\"No time for mercy, right?\"); break;\ncase 14: msg.channel.send(\"<@451188961180778496>'s enraged? I kind of like it, but it's not you! Calm down!\"); break;\ncase 15: msg.channel.send(\"Sorry, I didn't ask for your opinion.\"); break;\ncase 16: msg.channel.send(\"<@451188961180778496>, if you die now, I... I'll kill you again myself!\"); break;\ncase 17: msg.channel.send(\"Take the cat ears off, <@451188961180778496>. This is important.\"); break;\ncase 18: msg.channel.send(\"Shut the fuck up, catboy.\"); break;\ncase 19: msg.channel.send(\"No.\"); break;\ncase 20: msg.channel.send(\"What are you all doing? Taking a nap?\"); break;\ncase 21: msg.channel.send(\"Yes, I'm a pancake prince. And yes, I'm in love with <@451188961180778496>. Do you really have a problem with that?\"); break;\ncase 22: msg.channel.send(\"I... suppose, you can be my little pogchamp. Just this once. Come here.\"); break;\ncase 23: msg.channel.send(\"Yes, I'm trying to kill you. Stop being so immature about it.\"); break;\ndefault: msg.channel.send(\"That's quite the funny joke. It makes me want to puke\"); break;\n}",
-        "storage": "0",
-        "varName": "",
-        "name": "Run Script"
-      }
-    ],
-    "comType": "1"
-  },
-  {
     "name": "Ask",
     "permissions": "NONE",
     "restriction": "1",
@@ -217,81 +108,823 @@
         "storage": "0",
         "varName": "",
         "name": "Run Script"
+      }
+    ],
+    "comType": "0"
+  },
+  {
+    "name": "Triggers",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [
+      {
+        "title": "",
+        "author": "",
+        "color": "#a48252",
+        "timestamp": "false",
+        "url": "",
+        "authorIcon": "",
+        "imageUrl": "",
+        "thumbUrl": "",
+        "storage": "1",
+        "varName": "msg",
+        "name": "Create Embed Message"
       },
       {
-        "name": "Name",
-        "permissions": "NONE",
-        "restriction": "1",
-        "_id": "NaQlU",
-        "actions": [
-          {
-            "message": "0",
-            "varName": "",
-            "info": "4",
-            "storage": "1",
-            "varName2": "msg",
-            "name": "Store Message Info"
-          },
-          {
-            "info": "0",
-            "find": "787926660091215893",
-            "storage": "1",
-            "varName": "channel",
-            "name": "Find Channel"
-          },
-          {
-            "storage": "1",
-            "varName": "msg",
-            "comparison": "1",
-            "value": "787926660091215893",
-            "iftrue": "0",
-            "iftrueVal": "",
-            "iffalse": "1",
-            "iffalseVal": "",
-            "name": "Check Variable"
-          },
-          {
-            "info": "0",
-            "find": "754445790428004463",
-            "storage": "1",
-            "varName": "role.name",
-            "name": "Find Role"
-          },
-          {
-            "member": "1",
-            "varName2": "",
-            "role": "3",
-            "varName": "role.name",
-            "reason": "",
-            "name": "Add Member Role"
-          },
-          {
-            "channel": "5",
-            "varName": "channel",
-            "message": "Enjoy your stay, ${member}.",
-            "storage": "1",
-            "varName2": "you.have",
-            "iffalse": "0",
-            "iffalseVal": "",
-            "name": "Send Message"
-          },
-          {
-            "time": "15",
-            "measurement": "1",
-            "name": "Wait"
-          },
-          {
-            "storage": "1",
-            "varName": "you.have",
-            "reason": "",
-            "name": "Delete Message"
-          },
-          {
-            "name": "End Action Sequence"
-          }
-        ],
-        "comType": "1"
+        "storage": "1",
+        "varName": "msg",
+        "message": "**1.** hello/hey/hi [his name]\n**2.** goodnight [his name]\n**3.** good morning [his name]\n**4.** honey i'm home\n**5.** i love you [his name]\n**6.** i love you sumi/sumire\n**7.** i love you akira/ren/joker\n**8.** hello lgbtq community\n**9.** TANK\n",
+        "name": "Set Embed Description"
+      },
+      {
+        "storage": "1",
+        "varName": "msg",
+        "channel": "0",
+        "varName2": "",
+        "name": "Send Embed Message"
+      }
+    ],
+    "_id": "NUxOj",
+    "comType": "0"
+  },
+  {
+    "name": "Goro",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "dGgzY",
+    "actions": [
+      {
+        "behavior": "0",
+        "interpretation": "0",
+        "code": "const images = [\"https://i.pinimg.com/originals/ab/e3/0d/abe30d95faf7e21e99298007b9269f9d.gif\", \"https://i.pinimg.com/originals/5c/eb/9b/5ceb9b22eb19267ca6583d0c990269d5.gif\", \"https://i.pinimg.com/originals/aa/80/16/aa8016ed7fd6051ef812e5b59d0c280b.gif\", \"https://i.pinimg.com/originals/9f/d5/75/9fd575d279569bf9ccf1695ea427e32e.gif\", \"https://64.media.tumblr.com/3003f122ebf7f943bfb10db2daea5d9c/tumblr_p89pkeP6Z11w0hrkno1_400.gif\", \"https://64.media.tumblr.com/f543f9ad3253a7235107a84ef91b6e3b/tumblr_oqlgafmfFe1qffbm9o1_400.gif\", \"https://64.media.tumblr.com/5c02005c2e24eeaebea5e3b752ed2cb2/e21e8527b8f19667-5e/s540x810/d7037575faa35491f58791d25c2828123aa2bf98.gif\", \"https://64.media.tumblr.com/37dec0b086d37c6598ec190a5fcbcf8c/e21e8527b8f19667-6d/s540x810/d755d3479dbecf4ce531ece7854661609b513087.gif\",\n\"https://64.media.tumblr.com/0a7c9141301c821eb1eb360247819728/2247be1667970cbd-f6/s540x810/0e9274c65d1f4b0f15da0c27394f9dc5c5211d95.gif\", \"https://64.media.tumblr.com/fefef441a665128631708e6dc412cb5a/b77e33f8fbed6058-e6/s400x600/0d07af47cf10ce82d4406d2c3863702f348ae8ac.gif\", \"https://64.media.tumblr.com/483f7c865a47ce0d20ef3c0b201297f1/102261b1cb651c70-92/s540x810/5d3bef145860ab00ebc9314eb1acfb4f934bc03e.gif\", \"https://64.media.tumblr.com/6a56db202da6356afa49f805fc424c37/102261b1cb651c70-73/s540x810/27d60842c09a86c2cb9a1194de94f7a0d3e6ae46.gif\", \"https://64.media.tumblr.com/2e243f0e63c402ad49211471b4b995da/47d89c66fc8610a1-72/s400x600/bf29d4314349beeadcbde8efa556806deb01d434.gif\", \"https://64.media.tumblr.com/16f4b9b16ddbc5f398cc62f076761000/47d89c66fc8610a1-60/s400x600/aa5cd211a62fdee1116e70a36f0e0912c6b77c57.gif\", \"https://64.media.tumblr.com/d0d2695bafbaa0bac7a2cc8c019bc3c6/82b238aaf227a4e6-a3/s540x810/45dceb29966e1c20df220217ff9caafe10d3156d.gif\", \"https://64.media.tumblr.com/eb260da97902fdd68057e4ebe3645f80/82b238aaf227a4e6-64/s540x810/8a30c20f62a1be2f128fecf178d7b1aa14fff3a1.gif\", \"https://64.media.tumblr.com/ed244977a98ef4d24a1023b11bf0d5ae/2ff335f699efb8d4-dc/s540x810/4d2c6586133799c0f5cd6e1c9e7fd39d3025aa2c.gif\",\n\"https://64.media.tumblr.com/e487ac88dcf43b6e815724d7f004b340/3b64946df2c84321-c6/s540x810/4bcf0cbbbbc220eaf2e5cb8f8bbb4c0ccaa88e33.gif\", \"https://64.media.tumblr.com/e8165f887d1678dfd8affb0d385dd58b/035a8f34bedd12ed-fb/s540x810/2f14574d3ee661e530ee22239b589a02f7c802c3.gif\",\"https://64.media.tumblr.com/0b0c6997a86413e3a04cb61536470856/tumblr_pbrchxT9Yr1x6u4seo6_r1_400.gif\",\"https://64.media.tumblr.com/5503733ad469726e4316b8ef4e964f08/tumblr_pbw0pqfy9A1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/f8df301c949944a33d7c3ee20237c0a7/tumblr_osw27cS3rp1sqnvuno1_400.gif\", \"https://cdn.discordapp.com/attachments/740737933069516871/753429813284569118/image0.png\", \"https://64.media.tumblr.com/67f5d10636dc8d2db806b9c075d8c269/tumblr_pkk4b4EBJy1vqsfxmo1_1280.png\", \"https://64.media.tumblr.com/841fa7a3baba6188058a726f87997c85/6bb29efb99a82f8d-14/s1280x1920/88e444ec7752040c28ffd8f1d6f19980625146a3.jpg\", \"https://64.media.tumblr.com/b589c473b6f9edb93dadcf965f697d4c/6bb29efb99a82f8d-21/s1280x1920/3aad01d5c11c2a46d9d0e0a140c2e0c9cf3f3b26.jpg\", \"https://64.media.tumblr.com/a32024bab791acae93ea7e6a8b205e54/0b420392b8b050a1-6c/s1280x1920/27fb4913ddcb563134468dfe2a0192c3832b1941.jpg\", \"https://64.media.tumblr.com/fee1c40a8e01c60cf8f82f3e54737134/7c6b246399d0a2e1-f9/s540x810/91a6ae8dd9b68dab51f5ed6e4d41c9023ebf01b5.png\", \"https://cdn.discordapp.com/attachments/740737933069516871/753432751566225488/akechi.jpg\",\n\"https://64.media.tumblr.com/3f19996ceb6f412063bb2677af6b97fc/tumblr_pyvb465NFu1rns4m7o1_540.png\",\n\"https://64.media.tumblr.com/fcc8bb5e19c3e424528342a8c6329806/tumblr_orkmllYU7E1uhgdvpo1_1280.jpg\",\"https://64.media.tumblr.com/d90fb48224d4e2f8aea2bef55d44af52/tumblr_ooifo3Vnrw1uy59cto1_640.jpg\",\"https://64.media.tumblr.com/62cdc517b8ca8a068802177ba927858d/tumblr_phal4vcRoC1tcz4xu_1280.jpg\",\"https://64.media.tumblr.com/ef518e9ecd467c073a6e4295c5b9ffe4/tumblr_inline_osbhnqVnZM1qix85i_1280.jpg\",\"https://64.media.tumblr.com/340fd62c60fc8370c49f35e0a572e262/25571db00d558d1f-65/s400x600/631c3ee022ef84d8a86175bd6cb06d056346f216.gif\",\"https://64.media.tumblr.com/b127a921d99ffaa018caa11bccecde93/tumblr_pvmwrgnl7M1qfd51do3_500.gif\",\n\"https://64.media.tumblr.com/96b65f447bdb7e25f76975e7e839ab67/tumblr_oi4qzfcbtf1t8mwmro1_640.png\", \"https://64.media.tumblr.com/da5a531b199712666a6b9400f5f7f671/da686199b3d0ac8b-1c/s500x750/3cf77eaa17e6bad2ee018e249d1bb34bd317a24a.png\", \"https://64.media.tumblr.com/e894a9576d622fc99f71dc49b46b52e9/tumblr_pffy52AzeE1vgzd4so4_r1_400.gif\",\"https://pbs.twimg.com/media/DI7b82mWAAA_5ba.jpg\", \"https://64.media.tumblr.com/3378d7d37f53ff93588609a30fcfe821/tumblr_inline_p9lhg4DPkA1viryss_540.jpg\",\"https://64.media.tumblr.com/340fd62c60fc8370c49f35e0a572e262/25571db00d558d1f-65/s400x600/631c3ee022ef84d8a86175bd6cb06d056346f216.gif\", \"https://64.media.tumblr.com/b62ad5273b13011605659b33ffdb6ee4/0988b58245446062-6f/s400x600/ea522895e9a1ae663e177da81060010d543a39cf.gif\", \"https://cdn.discordapp.com/attachments/750210663372292186/754810282424926288/image0.jpg\", \"https://cdn.discordapp.com/attachments/750210663372292186/754809645360742400/image0.jpg\", \"https://64.media.tumblr.com/6bbdc328d2ced083a1a0dca107c82f47/619792edce1b58f3-ff/s500x750/f38324abc0b926a4deeb9d5c390f7f2664a9e448.png\", \"https://64.media.tumblr.com/b284defd8f0b0a3078b487f6abbc0c0c/tumblr_omboozzY3U1t8mwmro1_540.gif\", \"https://64.media.tumblr.com/db3e2d8640f1d5cf0fef44a1dc38a558/tumblr_omboozzY3U1t8mwmro2_540.gif\", \"https://64.media.tumblr.com/f5150b86c6bf7abcb30e870db2ab8e01/2e0f71e9b90bbbe2-dd/s640x960/a9a9b86ace87d5895f9fd7e8d2e883c2fcf7ef05.gif\", \"https://64.media.tumblr.com/feb43b251c4b0d3192a3bd776ce5fcb3/e21e8527b8f19667-14/s540x810/aa0abd433d34e65a29011dcda29ba853dcc4a453.gif\", \"https://i.pinimg.com/originals/7c/0b/85/7c0b85ffac85161a28952ab1defec852.gif\", \"https://i.pinimg.com/originals/aa/4e/3d/aa4e3d4032c5461e06efd0403c8dee63.gif\", \"https://media1.tenor.com/images/aacd29e05e01855d791bc3b164f8acf7/tenor.gif\", \"https://64.media.tumblr.com/81084aa9db7c95c878b6e64ce6e82fa1/tumblr_pcmmjtSpvE1vthyo6o1_540.gif\", \"https://64.media.tumblr.com/6743137dca19018d73764ed70835adad/tumblr_pa0k0yBlvf1vthyo6o2_r1_540.gif\", \"https://64.media.tumblr.com/7dec3412466abe7ef676579d3fa1624c/tumblr_pa2fpcGrd21vthyo6o3_540.gif\", \"https://64.media.tumblr.com/e79b4ecd54411b4b370da908953ec8b4/tumblr_p74knyC6981vthyo6o1_500.gif\", \"https://64.media.tumblr.com/d8a6500157b2f54c99d1599ed23cf2cb/tumblr_p69f3eMgzn1x6u4seo1_500.gif\", \"https://64.media.tumblr.com/62cf391fa782621916e891a51cf40c5a/tumblr_p1zqawIepM1vthyo6o1_250.gif\", \"https://64.media.tumblr.com/05c3ea5cc2d03819cb22259a69656b7a/tumblr_p1zqawIepM1vthyo6o2_250.gif\", \"https://64.media.tumblr.com/0f9cadeafe68fe237e280d3cdd29499a/tumblr_p19yxpkJh11vthyo6o2_400.gif\", \"https://64.media.tumblr.com/ea03759d9158e4b31d26e122129387ad/tumblr_p19yxpkJh11vthyo6o1_400.gif\", \"https://64.media.tumblr.com/3b032fb4fa4a250fada0c51077e2d9db/tumblr_oybsqzDs131vthyo6o1_r2_500.gif\", \"https://64.media.tumblr.com/038f8e9308c4f31fb532a4c81ba88fa9/tumblr_oybsqzDs131vthyo6o2_r1_500.gif\", \"https://64.media.tumblr.com/322a8025cebab79a973c85cf8ddbda6c/tumblr_ow454zgKPH1vthyo6o2_r4_250.gif\", \"https://64.media.tumblr.com/aab5c8fe500e15a311e6cb368f2a071f/tumblr_ow454zgKPH1vthyo6o4_r5_250.gif\", \"https://i.pinimg.com/originals/bb/67/85/bb678502b149c12a22767581966ac6f7.png\", \"https://i.pinimg.com/originals/b7/8a/96/b78a9659d1a36cdde2dc3b014716b3b2.jpg\", \"https://cdn.discordapp.com/attachments/750210663372292186/754836364687573092/67554985_369574400342392_619444221774534977_n.jpg\", \"https://64.media.tumblr.com/509cd9e846386db67709d2abc63d269d/tumblr_oqw0o38lbU1u7889mo3_r1_540.gif\", \"https://cdn.discordapp.com/attachments/750210663372292186/755170645775482970/image0.png\", \"https://cdn.discordapp.com/attachments/750210663372292186/755466066339037234/Eh8BW-WWkAARie5.jpg\", \"https://cdn.discordapp.com/attachments/750210663372292186/755465946675544144/Ehq19wjWAAEm20s.jpg\", \"https://vignette.wikia.nocookie.net/megamitensei/images/1/15/P5_MM_Illustration.jpg\", \"https://vignette.wikia.nocookie.net/megamitensei/images/8/8f/Akechi_mm_promo_art.png\", \"https://vignette.wikia.nocookie.net/megamitensei/images/4/42/MM_Akechi.png\", \"https://vignette.wikia.nocookie.net/megamitensei/images/1/15/MMCountdownAkechi.png\", \"https://vignette.wikia.nocookie.net/megamitensei/images/c/c9/Goro_Akechi_Theme_%28No_Background%29.png\", \"https://i.pinimg.com/originals/dd/49/01/dd4901bae99285c10194084c3b771a0c.gif\", \"https://i.pinimg.com/originals/d1/f3/41/d1f341ea3448e29bd8a67cfeb36da798.gif\", \"https://64.media.tumblr.com/36f681f87af5677f60d584ce393d1c1e/7abc2b1a6cd756d6-71/s400x600/3085cdae21e8a9d7becdbcb142c697273b27e0c0.gif\", \"https://64.media.tumblr.com/4924dc90a374a78dcbc63cb7b4c21be4/7abc2b1a6cd756d6-69/s400x600/5b125ebc6713d83dca328ed2ba7919d0d9097ea5.gif\", \"https://64.media.tumblr.com/feb43b251c4b0d3192a3bd776ce5fcb3/e21e8527b8f19667-14/s540x810/aa0abd433d34e65a29011dcda29ba853dcc4a453.gif\", \"https://cdn.discordapp.com/attachments/740737933069516871/756556421075828947/goroass.gif\", \"https://64.media.tumblr.com/1bb81f98ef598c9403543cfe17412f9b/e28a0088e91e4c6c-6e/s500x750/73e2804b9f5cc37efaa55de90fb35b325544fde2.gif\",  \"https://64.media.tumblr.com/14bc70b24aa646586aed4155a898de9e/02b4ef6596af7c6a-07/s1280x1920/2f06b312bbd8837f63ae4248019501fb71652ade.jpg\", \"https://64.media.tumblr.com/84511a59455e262dd1055e336a068c88/360c952ad0e28209-7a/s1280x1920/614d553d792016adbd25d66cd3ea9b3210a992cb.jpg\", \"https://64.media.tumblr.com/c2987548fbda91335483532e0093d3fe/93123f11ca8e78cf-c6/s2048x3072/b8b17198fe92477e4431c9ab66f38d4cf92ee42d.jpg\", \"https://64.media.tumblr.com/16a0fdca2abc0dbc671bb121189c6cfe/tumblr_pyv8yrjM7W1ro1j1mo1_500.png\", \"https://64.media.tumblr.com/40d44d1ec06eb8a666f4cc8ee5816640/tumblr_pnh9breaXV1xrizouo1_1280.png\", \"https://64.media.tumblr.com/765c29ecb179a3e88b4e12e95419af3a/69ef8a5fbbb340bd-ca/s1280x1920/6af8f14018304018bc58c59b03e6c2340778dba0.png\", \"https://64.media.tumblr.com/97d22c7d77d1d54ff7c2ce6b2fe7a76b/5724c2e95881fb25-3f/s1280x1920/118ff410ddf308ed6b0b4c2b5c9a31ccac83a616.jpg\", \"https://64.media.tumblr.com/f185319d25c0642b95f258eac133bb1d/9aa7a8e76b320d55-4e/s540x810/b361f09a037d7887f4ea8cedc2a4d34756bea6a4.gif\", \"https://64.media.tumblr.com/ed3ddbd7d05f4600648e86b791ee9211/9aa7a8e76b320d55-7a/s540x810/a1e6c012bcea81fbba22a9d57146b1c8b2f475b3.gif\", \"https://64.media.tumblr.com/757626503395cfc19ce32f750b9dc9cc/9aa7a8e76b320d55-2b/s540x810/24670fd3fca565e88e98293e00e4b7cbbd498460.gif\", \"https://pbs.twimg.com/media/EfoyJtYU8AERCkJ?format=jpg\", \"https://64.media.tumblr.com/5930352c79e1dab454f100a5f8b9087f/348380c7890f241f-59/s1280x1920/7bc48b2d1464719f78c9a9be90ecbc2d15caf2ea.jpg\", \"https://pbs.twimg.com/media/EfhbYdiU4AEGrEv?format=png\", \"https://pbs.twimg.com/media/EfhbIfKVoAALfpK?format=jpg\", \"https://64.media.tumblr.com/4ebf20ffda1cb903b8a808f258a20906/tumblr_otx6har1lu1wr0q6lo1_500.gif\", \"https://64.media.tumblr.com/31d849e01c369ca36a711ed5cf6be81a/tumblr_pbzrfsH7rT1x6u4seo2_540.gif\", \"https://pbs.twimg.com/media/DI7c3glXkAAAiEM?format=jpg\", \"https://pbs.twimg.com/media/DI7c3hsXUAA0bjV?format=jpg\", \"https://pbs.twimg.com/media/DB_d-NfW0AE6Qpy?format=jpg\", \"https://64.media.tumblr.com/871d0984d4164e68612f899a94f89616/d32bc503751e5ab2-31/s540x810/096dab7f05916df8c23cd0c2850477349c1d4a8a.gif\", \"https://64.media.tumblr.com/69bed751e4f5d95b42861e1d99c1d2f9/0d376cf69f84d615-0d/s1280x1920/0377ad83b1727cefd1168d4ea3d77bfe18b27122.png\", \"https://64.media.tumblr.com/dcc6b167ae6be2560b204642021cfd83/cc0a1229608ba929-6b/s500x750/7a0029fa45d766d45058815b5e1935d47706cad9.jpg\", \"https://64.media.tumblr.com/077df5693cf98f3b618664a432b36856/tumblr_ougo8zlpnf1wn6hn2o1_1280.png\", \"https://64.media.tumblr.com/e29008b25286e8d0371a9fbc00dc7196/tumblr_piq66m2Pid1scn34jo4_1280.png\", \"https://64.media.tumblr.com/5a6dd8fb616ec443e4628ab58e10eb14/c15d9215361e5abc-e7/s540x810/3baf7b468f15d335b58a9de2c6455401d018d313.gif\", \"https://64.media.tumblr.com/13c9f657dad085494add15b610d73661/82b238aaf227a4e6-27/s540x810/beec5980bdf7ed0830f1e7255b2a948bbe27c15c.gif\", \"https://64.media.tumblr.com/a9e4090b7993f792d6c3d10e52e878c2/82b238aaf227a4e6-ab/s540x810/aff3d623b3392112afaabe82c3ebdcd529425a2b.gif\", \"https://64.media.tumblr.com/c9cd7995205ae888ded45552e0495aac/tumblr_pvm4tpmNmC1we6z1vo1_540.gif\", \"https://64.media.tumblr.com/27f014e800f043c48c388c6e2e6766f4/tumblr_pvm4tpmNmC1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/98c556f892242c0f29441e2d64b3eea8/tumblr_pvm4tpmNmC1we6z1vo4_540.gif\", \"https://64.media.tumblr.com/8224d1d794b1dea0a697e1aa0ffbe522/c7f829014610a8b3-6b/s540x810/d360b70716befa31d9ada734cfb186fbc825bc7e.gif\", \"https://64.media.tumblr.com/7d097974e13491fcf53dc73d1c0b0ffd/0d46d78602d7297a-dd/s1280x1920/a02d56b7650d345afc95f3db0bcae19029f88d21.jpg\", \"https://64.media.tumblr.com/9d1de767d8cedec5395721919875bff2/tumblr_psdz3uybUd1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/0814edec76065b9cec2577a28a6ec3c2/tumblr_psdz3uybUd1we6z1vo1_540.gif\", \"https://64.media.tumblr.com/f849b030dc6f3b518905da6053717404/tumblr_pskmgkKAHn1we6z1vo1_400.gif\", \"https://64.media.tumblr.com/f765103b2de9d23b6e17fd3a658b8e66/tumblr_pskmgkKAHn1we6z1vo2_400.gif\", \"https://64.media.tumblr.com/85308cb597d35a4a80f71cf414cf2914/tumblr_pttbj8uF1S1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/c31a90684a820d6e65c707b420a5404a/tumblr_pweoejB1Cq1we6z1vo8_400.gif\", \"https://64.media.tumblr.com/cfd3aa5dc570eaa8b2c68bd26d42b7af/bc9b6bb50117a220-73/s640x960/4253ee8e47a8008289dd2454457b3401c8b26faa.jpg\", \"https://64.media.tumblr.com/9436e305a7a42d08403ca93bb25b21b8/bc9b6bb50117a220-3b/s640x960/ac3f2ce1829a6e9f0e68997423e422295c52acd3.jpg\", \"https://64.media.tumblr.com/dbe0ead7b3b0ae015da376478990e98d/bc9b6bb50117a220-c1/s640x960/ba28140f96c0c284893bb6bbccbe4306ef0c507d.jpg\", \"https://64.media.tumblr.com/27dbaa606f9a7aa8debc8fd8110a256f/bc9b6bb50117a220-e8/s640x960/50bc25e9c87b4883327674777aefe88d75018a2c.jpg\", \"https://64.media.tumblr.com/de457843163945c74aa34fffef6fe03f/975a203ce0e37730-06/s540x810/f4deb4e94707d53022abb4d16e7ec9c9b8537ec9.gif\", \"https://64.media.tumblr.com/fb55c436569d9c6012748f6cad82633f/d1a9800b5f0734f9-43/s540x810/d5dc3977eb64129ee4de42e28480ba6f26004843.gif\", \"https://64.media.tumblr.com/8de1cffaa447f3a52bf7d57efa72aead/85012893db1a4f94-bd/s540x810/9ae688a3f4fd1421d607eef5f6f592000686e41a.gif\", \"https://pbs.twimg.com/media/EfWDRsDXsAMVYgt.jpg\", \"https://pbs.twimg.com/media/D6TWP4MW0AEU9yx?format=jpg\", \"https://pbs.twimg.com/media/EC3BGKHXUAA1EPl?format=jpg\", \"https://pbs.twimg.com/media/ECNnlJfXUAAFMsn?format=jpg\", \"https://pbs.twimg.com/media/ECOyFE8WwAA1AZ4?format=jpg\", \"https://pbs.twimg.com/media/D7EE5dyWwAECXGf?format=jpg\", \"https://pbs.twimg.com/media/D4MvdbzW0AM4A3t?format=jpg\", \"https://pbs.twimg.com/media/D4JZRgIWkAAzs8v?format=jpg\", \"https://i.pinimg.com/originals/e4/c0/d0/e4c0d0ae12d9cdad214c13bfcaf53ca1.jpg\", \"https://pbs.twimg.com/media/EUIUt6AXQAMWJN2?format=jpg\", \"https://pbs.twimg.com/media/D3C4jOFWwAIaA_M?format=jpg\",  \"https://64.media.tumblr.com/75f952f4fb88f9a6482ed29fc5c9831a/fbf7c4fd32991635-07/s400x600/42f2b91fd8d0652c7eccc052a86caf8e5e467116.gif\", \"https://64.media.tumblr.com/959b479092f2fab5aa143af488b64bd2/ed821357d55f5442-16/s1280x1920/43aa8009997695d9e03215915197d1f05d81a36e.png\", \"https://64.media.tumblr.com/dd4f30d4728874f01cde4f8d7480d2a4/1a9d68d3cf70e2c2-9a/s540x810/c4993a646db73f6e012118af8484f41886544f56.gif\", \"https://64.media.tumblr.com/8d417bd9f07f21abc8279f93565a6124/1a9d68d3cf70e2c2-f2/s540x810/63ca782935c913fd4441ad13a8fb7a6f46b02698.gif\", \"https://64.media.tumblr.com/dc1a123f642f403fbac2e7fa54cd016b/1a9d68d3cf70e2c2-76/s540x810/7a056001375fb59b66bf6a9f73647ed145d165c9.gif\", \"https://64.media.tumblr.com/4164268b14597eeecea4b10c578f2abb/70914d1600c6e2dd-4a/s640x960/fba1a52b13b050818bc99eee2821a79f599ecc70.png\", \"https://64.media.tumblr.com/3af9d7d7ce751a0cec7bb5c668480869/73402c8cb45e81ae-8b/s1280x1920/7aae491d990f04e6bfb6396484ca28b6d3790246.png\", \"https://pbs.twimg.com/media/EUkk2oAUMAQtIp3.jpg\",  \"https://vignette.wikia.nocookie.net/megamitensei/images/8/8f/Akechi_mm_promo_art.png\", \"https://64.media.tumblr.com/057914729eed2ae9657ea2adf9361855/tumblr_pxwhdaGeKn1wnsicho3_640.png\", \"https://64.media.tumblr.com/791a9ace90b562fecd9145e60590ed3d/c8c13c0c0aa8c7ad-ee/s540x810/c6ef8e1a9cd66cde209319d1355fd1d234e7c465.png\", \"https://64.media.tumblr.com/7707c81b5ec14719df0f173c9efb8109/813ca8a47492740e-b3/s2048x3072/03be0d030f55f5fb75ddcd396c1fa1a76271e889.png\", \"https://64.media.tumblr.com/6a8d5aaefcb39bc54bdff5a78f78960b/3bd1702a5920be77-e2/s1280x1920/fd22a0dc48afc92a2cb4b45505384a017ba943b3.png\", \"https://64.media.tumblr.com/4d6b64a5dafa82921aae0f3568803385/tumblr_pkno69NEa11qa94xto1_540.gif\", \"https://pbs.twimg.com/media/EUkktwSUYAAOMRn?format=jpg\", \"https://pbs.twimg.com/media/EUpsuYKUwAAwyYv?format=png\", \"https://64.media.tumblr.com/45fa37545168403672befee5ffe536a3/a3377521726bb916-9a/s1280x1920/bcbbdeccb3adaa82fbfa8ea48e1683d42ac3afbd.jpg\", \"https://64.media.tumblr.com/47644251eaf8618594b5ff2c24ee0de4/aa87514762d0154d-ec/s1280x1920/85cf7e48e627bbf31aad3d3ae5a293d27ca9ecaa.jpg\",  \"https://64.media.tumblr.com/12514529168c48b8b67801053cc65843/5082ae4b88c03e83-97/s640x960/81985ab4ec8c8d05fc234beb8a2ece3e7d5d0feb.jpg\", \"https://64.media.tumblr.com/5765ef98c065d1f2abb9ecf712dd36cc/889773508667116a-88/s1280x1920/ada5802d825c63f0c562e9e0f1d4dd2b62c2a03d.jpg\", \"https://64.media.tumblr.com/804eed462782aeda6c2dca3d34986046/a0c741a6833d3c0d-6a/s1280x1920/e292939c22e1ca010c903506196c9cf9dc8e47b0.jpg\", \"https://64.media.tumblr.com/7e1b29c2caebf8d0c034689047f1d448/66282663a9f0f68e-d5/s1280x1920/e27c1ad1a592c232673b18e1651bfbd161105c27.jpg\", \"https://64.media.tumblr.com/0b92d8bee19b34532c2c1d63f5a9f18f/91a31161be26ea0d-05/s1280x1920/03d63cecb716bb401eae66552c2ab8b4f2e584b9.jpg\", \"https://64.media.tumblr.com/fe64c0bfc778359faa2308bf5b0b37ff/caddbcaa68d0153e-7a/s1280x1920/63f39783c68c086124892c0c30ad3fa563ee073e.jpg\", \"https://64.media.tumblr.com/7d668fdfc72a203078f32eba964d1ea2/27620ab680405c02-3f/s540x810/40b958cb82f0f5d5635920839f1e0a2096688b23.gif\", \"https://64.media.tumblr.com/ecdfbeac7ba23a52fc621b9d21938203/27620ab680405c02-07/s540x810/401af0a169c4b3caed578fe1d16c6457c557e0ef.gif\", \"https://64.media.tumblr.com/19f3a868ba03486ccf0de77d9a5f72ed/27620ab680405c02-f2/s540x810/1bd1db6e487f23b40a09bdd54a5afda6f4f4836e.gif\", \"https://64.media.tumblr.com/d6ec445ce768ec132bce381ad0ba8755/27620ab680405c02-f9/s540x810/34a31acb177e3c848c2a5e2c8d9f283fe7f3d148.gif\", \"https://64.media.tumblr.com/2e9e7e18814a63dfdebf4a9182d631e6/80be717f40f67773-fe/s400x600/886e3f647af8989671707a0d34c4e3ce0e1a318f.gif\", \"https://64.media.tumblr.com/273ffb8a678b8411ad135ee07c746c93/tumblr_p9ms0zNvaw1wrcccjo4_1280.jpg\", \"https://64.media.tumblr.com/730e14f282236932bc3024752f136f77/tumblr_pkexdjNyEG1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/cb223b9082aa6c95e3e4073c7dfca5b6/tumblr_pkexdjNyEG1x6u4seo2_540.gif\", \"https://64.media.tumblr.com/f330cea34c5fcb3f00ea8cec21d3a8f6/6cd40520a8912a2a-f1/s540x810/f9297a9ef65c6a24246ea3e3129aa059f360e4f2.gif\", \"https://64.media.tumblr.com/0563406f07ba6ade5d94553e19c037d8/2ff335f699efb8d4-e7/s540x810/a92d8d00a836c5af5adca4571ad41b9dea07fa4f.gif\", \"https://64.media.tumblr.com/fbf8b2f9deab9028c59df113158069b0/27b655190e08eeaf-c0/s540x810/5025cb74a1d8997422f844c32e12bee541994c08.gif\", \"https://cdn.discordapp.com/attachments/750210663372292186/763958790538133574/image0.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/765649109113503744/image0.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/765649122270773268/image0.png\", \"https://cdn.discordapp.com/attachments/750226726566756443/765649085126148167/image0.jpg\", \"https://64.media.tumblr.com/c3d3452bc02b34493c4bdb034f5a3640/c3af4f18af042b0e-c2/s400x600/9b8b26fdf7257976b5f9a326e9750ce19e91be48.gif\", \"https://64.media.tumblr.com/4f7c3fe50733d89e361500c19f603f84/c3af4f18af042b0e-07/s400x600/3fa82d6ac78aef69617dfce29a500c4b2505d8c9.gif\", \"https://pbs.twimg.com/media/Ei89sJHWoAANdYC?format=jpg&name=medium\", \"https://pbs.twimg.com/media/Eidg3aWXgAACdaU?format=jpg&name=medium\", \"https://pbs.twimg.com/media/EiDQFkvXgAcevfJ?format=jpg&name=900x900\", \"https://pbs.twimg.com/media/Ed4GSB8X0AA_i2R.jpg\", \"https://pbs.twimg.com/media/EbFrEmyUcAEenXF?format=png&name=small\", \"https://pbs.twimg.com/media/EgYMKDKXYAAb4i3?format=png&name=small\", \"https://64.media.tumblr.com/a6673f6b64a39af2f44a4336c8d0d530/tumblr_p5hbk5PFrZ1vthyo6o2_r1_540.gif\", \"https://64.media.tumblr.com/51d43aa1fbcc34010526ef12d476ebdd/tumblr_p5hbk5PFrZ1vthyo6o4_540.gif\", \"https://64.media.tumblr.com/81b306a8ed11863805036a9cfaafaa01/tumblr_p5hbk5PFrZ1vthyo6o3_540.gif\", \"https://64.media.tumblr.com/b502efc2a09d68adf437d04aeb5a7ba7/tumblr_p5hbk5PFrZ1vthyo6o5_540.gif\", \"https://64.media.tumblr.com/390eb94470dc817bd27a203373126c6a/tumblr_pftzbheFu01x6u4seo2_540.gif\", \"https://64.media.tumblr.com/4d6b64a5dafa82921aae0f3568803385/tumblr_pkno69NEa11qa94xto1_500.gif\", \"https://64.media.tumblr.com/a28bbd31606766b02ca7f08462294a80/tumblr_pucb24kWHo1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/2a63bdcd2fa6bbf21d1fc49d96142297/tumblr_p6m75vd08q1vthyo6o1_500.gif\", \"https://64.media.tumblr.com/02748d3f7d51802c2ba8b0e3be9ea2c7/tumblr_owmugtqGDj1vthyo6o1_r2_250.gif\", \"https://64.media.tumblr.com/aea275fffd1347402b3004cf0634be07/tumblr_ox7tpm8q7H1vthyo6o4_250.gif\", \"https://64.media.tumblr.com/d4a2b0b2ac4ad184161f395f2269d843/tumblr_ox7tpm8q7H1vthyo6o5_250.gif\", \"https://64.media.tumblr.com/df9a1d5d60f5175539dc1257cbcdd7f5/tumblr_ovvnw43k1h1vthyo6o2_250.gif\", \"https://64.media.tumblr.com/9da0d26d48914356147459fdd7cd14e8/tumblr_oxlvijXCMa1vthyo6o1_r1_250.gif\", \"https://64.media.tumblr.com/33cf1adc863259dfe7e530e9660662f8/tumblr_oxlvijXCMa1vthyo6o2_r1_250.gif\", \"https://64.media.tumblr.com/30c8851ffd9d420d874ccacae40e7797/tumblr_ov3r8hPV0e1vthyo6o7_r1_400.gif\", \"https://64.media.tumblr.com/b13340c77b3457cfa59165ad7b9bcc95/tumblr_oxvq8wHpzN1vthyo6o4_r2_500.png\", \"https://64.media.tumblr.com/b45d0dc84741bd066cd91a30c4d930cc/1c48a954701d54ff-1d/s540x810/31c830a2dc20224e087e18d26951a61c97ae0cdb.gif\", \"https://64.media.tumblr.com/37c680ca29239fafcf4b613c78f8e752/9b8962bbc907746c-c2/s540x810/80a2b01bf4b1eed494775a4a05ad5ceb03ba6744.gif\", \"https://64.media.tumblr.com/12600f4054bcfbcc4e4dfba95076e315/9b8962bbc907746c-a4/s540x810/b5db05052b123d038832f5ed2e2b34ed322b2cd6.gif\", \"https://64.media.tumblr.com/6029d5c40d6f46f381304c9640345ee9/df353587354717be-12/s540x810/7edf790c7fa0612a839bf2876373ede935451759.gif\", \"https://64.media.tumblr.com/6e56aed6bd379b8f7bba12165bdf6f2f/tumblr_pf4927mPa71vthyo6o1_540.gif\", \"https://64.media.tumblr.com/2f77fb8d845b0332a8af62a3e9f74899/tumblr_pb5s18ZgVi1x6u4seo1_540.gif\", \"https://64.media.tumblr.com/11afaea66580784adad41dc8f10bab37/tumblr_p9rf8bG6Cd1xvza3eo3_r2_540.gif\", \"https://64.media.tumblr.com/560afd98f19fb698e0731717398f7d6f/tumblr_p9rf8bG6Cd1xvza3eo4_r1_540.gif\", \"https://64.media.tumblr.com/7b3b54ac4c8133df3c6f08babec14e12/tumblr_p9rf8bG6Cd1xvza3eo6_r1_540.gif\", \"https://64.media.tumblr.com/7c80b7a02c94e82c539467e0a7278083/tumblr_p6mh8cj6MO1vthyo6o1_500.gif\", \"https://64.media.tumblr.com/f7962237d4cea26a3d0accd3bfe7198b/4082e2e472b716f8-30/s1280x1920/5701f35a93644df76d6df55aa7ef494131e65eae.gif\", \"https://64.media.tumblr.com/020ce45cd1e187f6f8f3568340bd1bae/tumblr_pb6obmsQvp1rs8tloo2_540.gif\", \"https://64.media.tumblr.com/fdf385c3ecf2232483544b4684347a31/tumblr_pb6obmsQvp1rs8tloo1_540.gif\", \"https://pbs.twimg.com/media/Ee4paEQWAAAR8VE?format=jpg&name=large\", \"https://pbs.twimg.com/media/EZ_y2dTXkAEI8Ve?format=jpg&name=360x360\", \"https://64.media.tumblr.com/bfedef43df707ac3cfd59df2fc04e219/3875f5c3c73036db-ea/s1280x1920/dbbd3746fa1d3e4dde0ed3ffb574c2790bb86007.png\", \"https://64.media.tumblr.com/6b8defc670ea274bf36b267eebd1dee4/097ad01f6006819c-87/s640x960/bede5a834ca6e56843001fcf2ac5fbec2030158a.jpg\", \"https://64.media.tumblr.com/0a0acc523a22c8399663a3ba917948e0/d6f8c2a79a9242eb-41/s500x750/a71f687e437eeb4dd9b47a5c0757ace257299a5e.png\", \"https://64.media.tumblr.com/afd74b38938b38194ee1e8bc32cfbe47/78a29fd53197578f-12/s500x750/25de61bfd484a089cb82f88773ab692543cc2dc3.gif\", \"https://64.media.tumblr.com/bebbf01782b418c25c1594805b732225/tumblr_inline_orbh3uN7kz1shg9ex_500.png\", \"https://64.media.tumblr.com/cea9cf176cd5c9af3cbed86a91aa25eb/tumblr_orafxpXs201vrpn4eo1_1280.png\", \"https://64.media.tumblr.com/22132931a534937138e1056c9a08b64e/d38299cf47f5530f-48/s500x750/4dee3ea7df2a1dab291ceed6b53df357a008e208.png\", \"https://64.media.tumblr.com/c1368955622b1237f961ae6a59983275/445b84fd54d2362c-38/s540x810/4673d81165bde65568c3524e9c6beb1f28553541.gif\", \"https://64.media.tumblr.com/ff1115ce8741f7356c4e13875afccb4e/445b84fd54d2362c-3e/s540x810/701d09128d847aaf7475a89e7dbe67c693b6c1b8.gif\", \"https://64.media.tumblr.com/e22000e13eaacffbb9f6306d0a47d07f/6626b19bf12124b8-ca/s540x810/01561382d570b7623f7a9649e9552e3c0930a13e.gif\", \"https://64.media.tumblr.com/e3560f0e43e53ac5d4882cd6f6498447/tumblr_ov1iepUtPw1vthyo6o3_r3_250.gif\", \"https://64.media.tumblr.com/e8aa63bd17d7e80b24a8b6e2da04f935/tumblr_ov1iepUtPw1vthyo6o1_r3_250.gif\", \"https://64.media.tumblr.com/3ab8c6f4e9eb0ab2490350b042527861/10bd77a3699cf169-0a/s500x750/99c4df927577e03018b7d59630ba053837d3d0ca.jpg\", \"https://64.media.tumblr.com/2e5c927e8a326afc8b9ad475eb527b7b/0b6c81bb2e341644-74/s1280x1920/50833a94cef01232c9d2421356a4fcb5fe98c2ef.png\", \"https://64.media.tumblr.com/bf97aac40a6afb5a58f9d78afced11b8/tumblr_pflystImL11qja52b_500.jpg\", \"https://64.media.tumblr.com/60e75d36cb8a5d2e55fe4d1bddf93882/10fe6ec1b9f69c27-7a/s500x750/59cf47bd2cba8e2428dee4400d9547e7a88ec9bf.gif\", \"https://64.media.tumblr.com/4b97f711aeec7c54a7bbac0923bffaa4/tumblr_p60mfl6CgK1vthyo6o1_500.gif\", \"https://64.media.tumblr.com/263ffe1ecb71e8e6856ba7b31cc118b4/tumblr_p60mfl6CgK1vthyo6o3_500.gif\", \"https://64.media.tumblr.com/52a3b51469d00f15cac22601b25e185d/93563e052e9a09fa-fe/s400x600/0f45c063a899d16748148cae07d0a5fc35554fff.gif\", \"https://64.media.tumblr.com/b48588e78a04ee7b3488ac52eff632ff/51f7783b1b680acd-a8/s500x750/2d00f0f1995e1f6cc37e6c31ff1570bcec39b42a.gif\", \"https://64.media.tumblr.com/ef35b514ed2d24e29940ae1b522ad838/tumblr_pb5mjprLyf1wfazcjo2_540.gif\", \"https://64.media.tumblr.com/fa007ed7de3d4abb2dfc3aea05f5f0d3/tumblr_pb5mjprLyf1wfazcjo3_540.gif\", \"https://64.media.tumblr.com/a1eb960671c3973a0eaf4d3e61c1bd9e/tumblr_pvt58cc4161x2iq47o1_400.gif\", \"https://64.media.tumblr.com/f19914dedff0e88adba2fb87f60853c8/tumblr_p82mc3ulga1xrizouo1_1280.jpg\", \"https://64.media.tumblr.com/13fb836cf598f967bc1cdbc54e45c5fb/tumblr_px61oziOpE1wnsicho1_640.png\", \"https://64.media.tumblr.com/086c269baa96ce5c38b9165fe36621f8/tumblr_pvmch60pe11qfd51do1_500.gif\", \"https://64.media.tumblr.com/9ca3a5941d931d3c71c0b5fe5e35cf0d/tumblr_pvm0t8ca821rtkhhpo1_1280.png\", \"https://64.media.tumblr.com/0f881f136a33a2eaf3a12bb16d5d47c3/tumblr_pth3mkxJdE1tfpjwm_500.jpg\", \"https://64.media.tumblr.com/b40594cd4b359fcce5089a45b7f7db98/7b3250922a0540bb-63/s400x600/fe5dc85c80fc4f54dcfda0d35b4541530f4d7e7d.gif\", \"https://64.media.tumblr.com/fac2bb7450fb25416d51f28bd85ae6f9/7b3250922a0540bb-ed/s400x600/84f8c8ba7a3d2d6d65547f55ff7ed12c5610de7e.gif\", \"https://64.media.tumblr.com/c037edbe8db02c5ce57994afaa4d6594/7b3250922a0540bb-16/s400x600/01e0e4a27d7221ec0fdc7708f99afcb02eee79d6.gif\", \"https://64.media.tumblr.com/2b0c61b2b74ef4203722c4194b604401/1805e4d14233eaa0-06/s1280x1920/ce8918cf51d138b04435c4b03ce9f6e5df0ab965.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/772598029022003220/image0.jpg\", \"https://cdn.discordapp.com/attachments/750226726566756443/771882611470630912/image0.jpg\", \"https://64.media.tumblr.com/17b43461e182bd7294e9c4ba48c6d59e/a8691f39e5d6b7a9-a3/s2048x3072/1b223db33e97c44c07f9319668f512f63e3f98da.png\", \"https://64.media.tumblr.com/7d71e01addf9b9305be46d0cb0c57507/37e81a0be0fdb94f-52/s2048x3072/97be8e1a1db7c99cdccb9bb1b27ea55cc68e2df0.jpg\", \"https://64.media.tumblr.com/e38bc029fae82eb9246a5fb3c7475956/d5fed8a6331a2d5f-ec/s1280x1920/3be215a0f0bf5c1670d590876cc01e8adfffd76f.png\", \"https://64.media.tumblr.com/21770583a9d7571660b28c15265f64a9/0689745cc0e829a1-c6/s1280x1920/a11a828ced83f03973858618127770df12fb82a3.jpg\", \"https://64.media.tumblr.com/fa3c3b90d3aba3dfade311c1956542ed/3155957329501bbb-3f/s1280x1920/a55ee5c7917bf85b26de07522498d6f614827b25.jpg\", \"https://64.media.tumblr.com/73a4e7b24249073f4477928cb74514ff/aa4c997eec14e509-b1/s1280x1920/fb6874c82c85b8671b393d9dd20c03981e5cbcb2.png\", \"https://64.media.tumblr.com/5de14964a9af954c9cbb444fe8fab0e4/b2024bbd04c01929-cc/s1280x1920/b1b5def0d7e2d4b67df1472129ba0555db5f58c7.jpg\",\"https://64.media.tumblr.com/844c44e04d64219e4dff1113378381b8/b7d2f557dcc18bf4-88/s1280x1920/1786d79ebf2d62f62cabea668737900e850778e1.jpg\", \"https://64.media.tumblr.com/209209eb9ec2869d341c0e1da6a5f1cb/6beb650ca611764e-f0/s1280x1920/ececb281bcb6048fd5a8bd4fe1eb91be528660d3.png\", \"https://64.media.tumblr.com/0b9d89ff1cf8caa21ede82d3d398af9f/fe5491ca70c9a772-19/s1280x1920/c93bb9c505be71c806442727057f8d19e504b052.png\", \"https://64.media.tumblr.com/2d2702008d327d666e14c8bdd478b1f1/9ec348bd1124c2d5-b1/s500x750/2bea88eb61048d63a6be99dcd6acef4a53ce6032.jpg\", \"https://64.media.tumblr.com/954b0dde6bba52e086e1cb2915f5a186/b9127250cd964760-aa/s640x960/8e258d8dc4419251e6527431caebce8d46f6e0e0.jpg\", \"https://64.media.tumblr.com/fd245edb9fe8280e1ae5133cfd6c1993/532bd00bcbe423c0-77/s500x750/9824f0fa1b76a4ecf94be1f83978a1e430dd299e.jpg\", \"https://64.media.tumblr.com/c407f0e709c775a8992c172313551b6c/58e676812ca13cc8-47/s500x750/3aec890aaac7b0ee23c22daff6a5c30fbdc14a4c.jpg\", \"https://64.media.tumblr.com/14b56c895c675de83886d1dc0de79da1/c89e2ea4a59fb6e8-c4/s500x750/60640075d884a4592741db19b971bfe490789bef.jpg\", \"https://64.media.tumblr.com/16c8680352f5d28f5ea81ae863ac8344/defb9ad344c090cf-2e/s2048x3072/ea477b6fbd9135e6467f156729b19ccd0c1caebd.png\", \"https://64.media.tumblr.com/d23da2f68e141074b5e3b21790425943/tumblr_pq4iokU2cr1xrizouo1_1280.png\", \"https://64.media.tumblr.com/77f41fd36aef78b11daa1abc14e02719/tumblr_poscvkdBxX1xrizouo1_640.png\", \"https://64.media.tumblr.com/72a5f68abf34b94ca11a3c169b779308/tumblr_pp1n3cQxJY1xrizouo1_1280.png\", \"https://64.media.tumblr.com/14c45a61e0029efd35f2f34dddbbe413/tumblr_po3gwcpPdZ1xrizouo1_1280.png\", \"https://64.media.tumblr.com/eece7a776912d14458e85550bed25b0d/tumblr_poscdnQw451xrizouo1_640.png\", \"https://64.media.tumblr.com/8f0e6221477656ffe14d91a90a3d4ef4/tumblr_pnko2eNQTK1xrizouo1_1280.png\", \"https://64.media.tumblr.com/d193923549795c6999e921ca5c1bb6a7/tumblr_pna4dne4AL1xrizouo1_1280.png\", \"https://64.media.tumblr.com/d1553a7cd8f5de47e54e7f2791988c6c/tumblr_pjjzekYZhX1xrizouo1_1280.png\", \"https://64.media.tumblr.com/e2e5d891caada160769cf707ff3e37df/d1c87a6dee8908fb-2a/s1280x1920/60d949b72ff7bd2460ba1567b32fa96d5925cb46.jpg\", \"https://cdn.discordapp.com/attachments/740644723793985599/749082669463371796/image0.png\", \"https://64.media.tumblr.com/1189edc9bae4f435dd420c151957e2d9/6bb29efb99a82f8d-62/s500x750/bbe974214c3620515d6b721f963a5f9e8eb61f7d.jpg\", \"https://64.media.tumblr.com/c7c30c8f0b5f5e83563818e0355c7a54/e4e3b14c3d59b90b-57/s2048x3072/5b329db159e1a63cfb53a452f2e7430c96ace86b.png\", \"https://64.media.tumblr.com/86916256e2ce0d7367130007a520a303/d81d5aa761c13893-d5/s1280x1920/01207dc5706a4fd14e66fb560478af20bd82e2d4.png\", \"https://64.media.tumblr.com/fd2ccbd3891fab2093e06c5319d67c46/96b8759e2391bbca-d1/s1280x1920/67cf72f1037d5831589a3cffc17d83c8ff7babc9.png\", \"https://64.media.tumblr.com/dcc8bf763097fab968857dde5c5df596/tumblr_pnhbhmybhS1vqsfxmo1_640.png\", \"https://64.media.tumblr.com/f4a742db292bfe4c22bfa80d31234537/tumblr_pvm45cSuAu1we6z1vo1_540.gif\", \"https://64.media.tumblr.com/1891ff8b70b1fa2d64f6bec00b88dbd7/tumblr_pvm45cSuAu1we6z1vo2_540.gif\", \"https://64.media.tumblr.com/8e4dbfe50a9b4d1f482904c4cd36c6b4/tumblr_pvm3slqeP91we6z1vo2_540.gif\", \"https://64.media.tumblr.com/8947a2bb24a97589608682479c0af35d/tumblr_psqkn4rZ3k1we6z1vo2_400.gif\", \"https://64.media.tumblr.com/48b7206a5be6b9e9e23111ce43a01d4e/tumblr_pfpp94zty91vgzd4so5_r1_540.gif\", \"https://64.media.tumblr.com/2bb4df36112376ca31a031007d396266/tumblr_pfpp94zty91vgzd4so7_r1_540.gif\", \"https://64.media.tumblr.com/72b2bfec21f3b77723a4d0c5c3e7fc84/tumblr_pbil2omMJP1w0hrkno1_540.gif\", \"https://64.media.tumblr.com/8f5936598326aeb08c5ff0967cf51889/tumblr_pezkftEtsa1vgzd4so9_r1_540.gif\", \"https://64.media.tumblr.com/eec4ffb997810e56328613c59f3dfc20/tumblr_pasg459gWE1rztjsno3_400.gif\", \"https://64.media.tumblr.com/ec01b71d2459bca5b086cd7a6d624e17/tumblr_pasg459gWE1rztjsno4_400.gif\", \"https://64.media.tumblr.com/55b050789f8af788325874af5fac039f/6eccda68f0742e00-66/s540x810/7344a3f183a57bd0de70c713d98282ff7530b40d.gif\", \"https://64.media.tumblr.com/a2835fbc20cc8e78ad6755fb41f0677a/7a830d10891866ba-54/s640x960/37bbcb36494c87fb556ee4c367e0ad0785265ca5.png\", \"https://64.media.tumblr.com/71ad8d506e0929635bb3366dd9ffcee3/tumblr_pvczxoWYP81qfd51do4_400.gif\", \"https://64.media.tumblr.com/acd09a34cdb981a7f5f0a5d8bfe54c60/tumblr_pvczxoWYP81qfd51do9_400.gif\", \"https://cdn.discordapp.com/attachments/740672032714391613/788776929205026816/image0.jpg\", \"https://pbs.twimg.com/media/EpIXZHcXYAAq2rK.jpg\", \"https://64.media.tumblr.com/257e9415cbd875699670bb67e54c0b17/af318b1568ec7d18-0d/s540x810/9fda9c8688e0d1176dc60604e99757caec8fbb28.gif\", \"https://64.media.tumblr.com/231db7541a67df1b0455610e7739ff5b/af318b1568ec7d18-44/s540x810/4220ada3439d9b68b687d2685d1662364c980b55.gif\", \"https://pbs.twimg.com/media/EoSQlGEWMAA8URj?format=png&name=900x900\", \"https://pbs.twimg.com/media/EO_ZNIBX0AASVr_?format=jpg&name=large\", \"https://pbs.twimg.com/media/EXG9SkbUcAAVPoA?format=jpg&name=900x900\", \"https://pbs.twimg.com/media/EW0CZopUYAEeIMK?format=jpg&name=large\", \"https://cdn.discordapp.com/attachments/740650769916624996/790443631240544256/image0.jpg\", \"https://cdn.discordapp.com/attachments/740648250192691261/790452173614874634/image4.jpg\", \"https://pbs.twimg.com/media/EUeEPEYXkAUOVWx?format=jpg&name=large\", \"https://pbs.twimg.com/media/EUEjjtLWAAArBEX?format=png&name=900x900\", \"https://pbs.twimg.com/media/ETBuGC1XQAEPw8r?format=jpg&name=large\", \"https://pbs.twimg.com/media/EQSltcCWoAEGtCT?format=png&name=small\", \"https://pbs.twimg.com/media/EOXC-vdWkAM_vMn?format=png&name=large\", \"https://pbs.twimg.com/media/ENojUVDX0AAKp4Z?format=png&name=small\", \"https://pbs.twimg.com/media/ENEoBbJWwAAUb-o?format=png&name=small\", \"https://pbs.twimg.com/media/ENyyMg7W4AIE6bI?format=jpg&name=medium\", \"https://cdn.discordapp.com/attachments/750226726566756443/791056763193524264/image0.png\", \"https://pbs.twimg.com/media/Eq-7IMDXcAEVdFQ?format=jpg&name=900x900\", \"https://pbs.twimg.com/media/Eq-8BVcXUAMzCEa?format=jpg&name=small\", \"https://pbs.twimg.com/media/Eq-8SwcXEAIxb7e?format=jpg&name=large\", \"https://pbs.twimg.com/media/Eq-80sFXMAISZKS?format=jpg&name=900x900\",\"https://64.media.tumblr.com/89f963ed1d45d83e22a2cc3a8e0dee89/d19bc73799c44440-32/s1280x1920/bbd1b0826109c2a2f5526fa2c32ff6beea4c55f2.jpg\", \"https://64.media.tumblr.com/304d0b9ca893cfdf7b82f57b0174fe77/1b544a4ce3ab2cde-0d/s2048x3072/a9abe580dfe9b7dd363bb073df22446f52e316e3.png\", \"https://64.media.tumblr.com/f3f30ccc1877d94bbb8b0298474b1e25/4f370f35104666da-de/s500x750/3b52108717c08e434921ba53a865df19664ce2a1.png\",\"https://64.media.tumblr.com/27f5fcbe65cd028da51c635194d457cd/992e9fc59a24fcee-57/s540x810/b9162366c96c4f6b539a29619806bc66f50cbd3a.gif\"]\nconst randomImage = images[Math.floor(Math.random() * images.length)]\nmsg.channel.send(new DiscordJS.MessageEmbed().setImage(randomImage))",
+        "storage": "0",
+        "varName": "",
+        "name": "Run Script"
       }
     ]
-  }
+  },
+  {
+    "name": "Shoot",
+    "permissions": "NONE",
+    "restriction": "1",
+    "actions": [
+      {
+        "condition": "1",
+        "comparison": "0",
+        "value": "1",
+        "iftrue": "3",
+        "iftrueVal": "2",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Check Parameters"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "```\nMention a user in order to use this command!\n```",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Case closed. This is how your 'justice' ends. *<@789277053291462698> shot ${mentionedUser}* :gun:",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      }
+    ],
+    "_id": "pRUXW"
+  },
+  {
+    "name": "Name",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "NaQlU",
+    "actions": [
+      {
+        "message": "0",
+        "varName": "",
+        "info": "4",
+        "storage": "1",
+        "varName2": "msg",
+        "name": "Store Message Info"
+      },
+      {
+        "info": "0",
+        "find": "740647235741679706",
+        "storage": "1",
+        "varName": "channel",
+        "name": "Find Channel"
+      },
+      {
+        "storage": "1",
+        "varName": "msg",
+        "comparison": "1",
+        "value": "740647235741679706",
+        "iftrue": "0",
+        "iftrueVal": "",
+        "iffalse": "1",
+        "iffalseVal": "",
+        "name": "Check Variable"
+      },
+      {
+        "info": "0",
+        "find": "740721239538270260",
+        "storage": "1",
+        "varName": "role.name",
+        "name": "Find Role"
+      },
+      {
+        "member": "1",
+        "varName2": "",
+        "role": "3",
+        "varName": "role.name",
+        "reason": "",
+        "name": "Add Member Role"
+      },
+      {
+        "channel": "5",
+        "varName": "channel",
+        "message": "Enjoy your stay, ${member}. <#750826082214739970> is now available.",
+        "storage": "1",
+        "varName2": "you.have",
+        "iffalse": "0",
+        "iffalseVal": "",
+        "name": "Send Message"
+      },
+      {
+        "time": "20",
+        "measurement": "1",
+        "name": "Wait"
+      },
+      {
+        "storage": "1",
+        "varName": "you.have",
+        "reason": "",
+        "name": "Delete Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "1"
+  },
+  {
+    "name": "789277053291462698",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "fTPuB",
+    "actions": [
+      {
+        "storage": "1",
+        "varName": "rand-num",
+        "min": "1",
+        "max": "27",
+        "name": "Generate Random Number"
+      },
+      {
+        "code": "switch(tempVars(\"rand-num\")){\ncase 1: msg.channel.send(\"Don't lecture me, you piece of shit...\"); break;\ncase 2: msg.channel.send(\"That's not funny at all. It's disturbing.\"); break;\ncase 3: msg.channel.send(\"Even if I only have a little time, I'd like to spend it with you.\"); break;\ncase 4: msg.channel.send(\"If only there was someone who loved you.\"); break;\ncase 5: msg.channel.send(\"Teammates!? Friends!? To hell with that!\"); break;\ncase 6: msg.channel.send(\"Justice? Righteousness!? Keep that shit to yourselves!\"); break;\ncase 7: msg.channel.send(\"Pancakes… I never want to hear that word again for a long, *long* time.\"); break;\ncase 8: msg.channel.send(\"Oh, am I mistaken? I thought I heard something about pancakes...\"); break;\ncase 9: msg.channel.send(\"I am an ace detective… a celebrity! But you… you’re just some criminal trash living in an attic! **SO HOW…!?**\"); break;\ncase 10: msg.channel.send(\"In the end... I couldn't be special...\"); break;\ncase 11: msg.channel.send(\"My SKILLS exceeds yours!\"); break;\ncase 12: msg.channel.send(\"Case closed. This is how your 'justice' ends.\"); break;\ncase 13: msg.channel.send(\"No time for mercy, right?\"); break;\ncase 14: msg.channel.send(\"<@451188961180778496>'s enraged? I kind of like it, but it's not you! Calm down!\"); break;\ncase 15: msg.channel.send(\"Sorry, I didn't ask for your opinion.\"); break;\ncase 16: msg.channel.send(\"<@451188961180778496>, if you die now, I... I'll kill you again myself!\"); break;\ncase 17: msg.channel.send(\"Take the cat ears off, <@451188961180778496>. This is important.\"); break;\ncase 18: msg.channel.send(\"Shut the fuck up, catboy.\"); break;\ncase 19: msg.channel.send(\"No.\"); break;\ncase 20: msg.channel.send(\"What are you all doing? Taking a nap?\"); break;\ncase 21: msg.channel.send(\"Yes, I'm a pancake prince. And yes, I'm in love with <@451188961180778496>. Do you really have a problem with that?\"); break;\ncase 22: msg.channel.send(\"I... suppose, you can be my little pogchamp. Just this once. Come here.\"); break;\ncase 23: msg.channel.send(\"Yes, I'm trying to kill you. Stop being so immature about it.\"); break;\ncase 24: msg.channel.send(\"I genuinely hate this. I'm not even acting.\"); break;\ncase 25: msg.channel.send(\"I'm already tired of hearing about Jesus.\"); break;\ncase 26: msg.channel.send(\"I'm surrounded by absolute fools.\"); break;\ndefault: msg.channel.send(\"That's quite the funny joke. It makes me want to puke\"); break;\n}",
+        "behavior": "0",
+        "interpretation": "0",
+        "storage": "0",
+        "varName": "",
+        "VTypeSelect": "0",
+        "CVTypeValue": "",
+        "name": "Run Script"
+      }
+    ],
+    "comType": "1"
+  },
+{
+  "name": "remindme",
+  "temp": "",
+  "event-type": "1",
+  "_id": "Lxdvs",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} You need to rely on *me* to force you to write? Fine. If you want to cancel this command at any time, reply with ``>stop``.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please select how often you want to be reminded.\n\nEvery ``>1``hour\nEvery ``>2`` hours\nEvery ``>3`` hours",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "restriction": "1",
+  "comType": "0"
+},
+{
+  "name": "1",
+  "temp": "",
+  "event-type": "1",
+  "_id": "trEjC",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} I will start reminding you 1 hour from now.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "3600000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "4",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Have you seriously not written yet? *What* are you doing?",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "3600000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "7",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} If you have time to send silly messages, you can find time to finish your responsibilites.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "3600000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "10",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} *Go* write.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "3600000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "13",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Don't tell me you still haven't written? Unbelievable.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "3600000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Have you written today?",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "3600000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "19",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Make yourself useful to me and **write.**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "3600000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "4",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    }
+  ],
+  "restriction": "1",
+  "comType": "0"
+},
+{
+  "name": "2",
+  "temp": "",
+  "event-type": "1",
+  "_id": "trEjC",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} I will start reminding you 2 hours from now.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10200000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "4",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Have you seriously not written yet? *What* are you doing?",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10200000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "7",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} If you have time to send silly messages, you can find time to finish your responsibilites.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10200000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "10",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} *Go* write.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10200000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "13",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Don't tell me you still haven't written? Unbelievable.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10200000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Have you written today?",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10200000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "19",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Make yourself useful to me and **write.**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10200000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "4",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    }
+  ],
+  "restriction": "1",
+  "comType": "0"
+},
+{
+  "name": "3",
+  "temp": "",
+  "event-type": "1",
+  "_id": "trEjC",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} I will start reminding you 3 hours from now.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10800000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "4",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Have you seriously not written yet? *What* are you doing?",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10800000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "7",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} If you have time to send silly messages, you can find time to finish your responsibilites.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10800000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "10",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} *Go* write.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10800000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "13",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Don't tell me you still haven't written? Unbelievable.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10800000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Have you written today?",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10800000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "19",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "source": "vFysG",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "channel": "0",
+      "varName": "writing_channel",
+      "message": "${member} Make yourself useful to me and **write.**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content === '>stop' && author.id === user.id",
+      "max": "1",
+      "time": "10800000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "4",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    }
+  ],
+  "restriction": "1",
+  "comType": "0"
+},
+{
+  "name": "stop_remind",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "vFysG",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} Oh, you're finished? Good work today. You've impressed me.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
 ]
